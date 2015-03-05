@@ -1,0 +1,133 @@
+Capacity veryfied:
+	recogonize all avialable devices and get device by name
+	unmount a filesystem
+	destroy a device
+	create a new partition
+	create ext4/ext3 etc filesystem
+	create a new VG
+	create a new PV
+	create a new LV
+	format a LV to a specifical filesystem
+	mount a device to a direction
+
+nothing will be changed until the doIt() is executed.
+mount will unvisible after reboot
+
+dependences:
+Requires: python
+Requires: parted >= %{partedver}
+Requires: pyparted >= %{pypartedver}
+Requires: pykickstart >= %{pykickstartver}
+Requires: python-pyblock >= %{pythonpyblockver}
+			dmraid
+			dmraid-events
+			sgpio
+Requires: python-cryptsetup >= %{pythoncryptsetupver}
+Requires: util-linux >= %{utillinuxver}
+Requires: device-mapper >= %{dmver}
+Requires: cryptsetup-luks
+Requires: mdadm
+Requires: lvm2 >= %{lvm2ver}
+Requires: dosfstools
+Requires: e2fsprogs >= %{e2fsver}
+Requires: btrfs-progs
+Requires: device-mapper-multipath
+Requires: lsof
+
+lpar11 needs libselinux-python
+
+yum install -y parted  pyparted  pykickstart  python-pyblock dmraid	dmraid-events sgpio python-cryptsetup  util-linux  device-mapper  cryptsetup-luks mdadm lvm2  dosfstools e2fsprogs  btrfs-progs device-mapper-multipath lsof 
+
+import blivet
+
+b=blivet.Blivet()
+b.reset()
+
+sdb1=b.devicetree.getDeviceByName("sdb1")
+sdb=b.devicetree.getDeviceByName("sdb")
+part=b.devicetree.getChildren(sdb)[0]
+#part.format.unmount()
+b.destroyDevice(sdb1)
+
+b.initializeDisk(sdb)
+
+part=b.newPartition(size=4000,parents=[sdb])
+b.createDevice(part)
+
+
+#create new ext4
+#create new PV
+fmt=blivet.formats.getFormat("lvmpv",lable="test",mountpoint="/home/my")
+b.formatDevice(part,fmt)
+
+blivet.partitioning.doPartitioning(b)
+b.doIt()
+
+fmt.mount()
+
+
+# create new VG
+a=b.pvs
+request=b.newVG(parents=a)
+b.createDevice(request)
+b.doIt()
+
+#create new LV
+request2=b.newLV(parents=[request])
+request3=b.newLV(size=1000,name="lvtest",parents=[request])
+b.createDevice(request3)
+b.doIt()
+
+#format lv
+a=b.vgs
+request=b.newLV(size=1000,name="twuLv",parents=a)
+b.createDevice(request)
+fmt=blivet.formats.getFormat("ext4",lable="test_twu",mountpoint="/home/twu")
+b.formatDevice(request,fmt)
+blivet.partitioning.doPartitioning(b)
+b.doIt()
+
+fmt.mount()
+b.doIt()
+
+
+#erase lvs
+sdb1=b.devicetree.getDeviceByName("sdb1")
+b.recursiveRemove(sdb1)
+b.doIt()
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+>>> import blivet
+>>> b=blivet.Blivet()
+>>> b.reset()
+
+>>> sdb=b.devicetree.getDeviceByName("sdb")
+>>> sdc=b.devicetree.getDeviceByName("sdc")
+
+>>> fmt=blivet.formats.getFormat("lvmpv",lable="test",mountpoint="/home/my")
+>>> b.formatDevice(sdb,fmt)
+>>> fmt=blivet.formats.getFormat("lvmpv",lable="test2",mountpoint="/home/my2")
+>>> b.formatDevice(sdc,fmt)
+
+>>> blivet.partitioning.doPartitioning(b)
+>>> b.doIt()
+
+>>> a=b.pvs
+>>> request=b.newVG(parents=a)
+>>> b.createDevice(request)
+>>> b.doIt()
+
+>>> a=b.vgs
+>>> request=b.newLV(size=2500,name="twuLv",parents=a)
+>>> b.createDevice(request)
+
+>>> fmt=blivet.formats.getFormat("ext4",lable="test_twu",mountpoint="/home/twu")
+>>> b.formatDevice(request,fmt)
+>>> blivet.partitioning.doPartitioning(b)
+>>> b.doIt()
+>>> fmt.mount()

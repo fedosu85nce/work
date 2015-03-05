@@ -1,0 +1,110 @@
+\documentclass[notes]{beamer}
+
+
+\usepackage{beamerthemeshadow}  % 使用shadow风格
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps}
+
+\pgfdeclaremask{titlemask}{pku-lake2-mask}
+\pgfdeclareimage[mask=titlemask,height=2.5cm]{title}{lake}
+
+\usepackage{beamerthemesplit}
+\usepackage{graphics}
+
+
+
+\begin{document}
+
+\title{Blivet}
+\author{Tao Wu}
+\section{Introduction}
+\titlegraphic{\pgfuseimage{title}}
+
+\frame{\titlepage}
+  \frame
+  {
+    \frametitle{Outline of Topics}
+
+    \tableofcontents
+  }
+
+\frame{
+\frametitle{A brief view}
+\begin{itemize}
+\item{
+Blivet is a python module which is splitted out from anaconda for system storage
+configuration.
+}
+\item{Requires:
+pykickstart util-linux pyparted device-mapper cryptsetup-luks
+python-cryptsetup mdadm etc (14 modules total) }
+\end{itemize}
+}
+
+\section{A LVM example}
+\frame{
+\frametitle{Initialization}
+\begin{itemize}
+\item{import blivet }
+\item{b=blivet.Blivet()}
+\item{b.reset()}
+\item{dasdb=b.devicetree.getDeviceByName("dasdb")}
+\item{b.recursiveRemove(dasdb)}
+\item{b.initializeDisk(dasdb)}
+\end{itemize}
+\setlength{\unitlength}{1 cm}
+}
+
+\subsection{Create PV}
+\frame{
+\frametitle{Create new PV}
+\begin{enumerate}
+\item{part=b.newPartition(size=8000,parents=[dasdb])}
+\item{b.createDevice(part)}
+\item{fmt=blivet.formats.getFormat("lvmpv",lable="pv1")}
+\item{b.formatDevice(part,fmt)}
+\item{blivet.partitioning.doPartitioning(b)}
+\item{b.doIt()}
+\end{enumerate}
+}
+\subsection{Create VG}
+\frame{
+\frametitle{Create new VG}
+\begin{itemize}
+\item{a=b.pvs}
+\item{request=b.newVG(parents=a)}
+\item{b.createDevice(request)}
+\item{b.doIt()}
+\end{itemize}
+}
+\subsection{Create LV}
+\frame{
+\frametitle{Create new LV}
+\begin{itemize}
+\item{a=b.vgs}
+\item{request=b.newLV(size=2500,name="lv1",parents=a)}
+\item{b.createDevice(request)}
+\item{fmt=blivet.formats.getFormat("ext4",lable="test1",}
+\item{mountpoint="/home/test1")}
+\item{b.formatDevice(request,fmt)}
+\item{blivet.partitioning.doPartitioning(b)}
+\item{b.doIt()}
+
+\item{fmt.mount()}
+\end{itemize}
+}
+
+\section{Resource}
+\frame{
+\frametitle{Who is available?}
+\begin{itemize}
+\item{IRC: freenode \#anaconda}
+\item{David Lehman: dlehman@redhat.com}
+\end{itemize}
+}
+
+\section{Practice on ltczhp17}
+\frame{
+\frametitle{Practice on ltczhp17}
+}
+
+\end{document}

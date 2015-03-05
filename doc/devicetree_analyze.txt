@@ -1,0 +1,33 @@
+Device(object)
+    StorageDevice
+		DiskDevice
+			iScsiDiskDevice(DiskDevice,NetworkStorageDevice)
+			FcoeDiskDevice(DiskDevice,NetworkStorageDevice)
+			ZFCPDiskDevice
+			DASDDevice
+		PartitionDevice
+		DMDevice
+			DMLinearDevice
+			DMCryptDevice
+				LUKSDevice
+			LVMVolumeGroupDevice
+			LVMLogicalVolumeDevice
+				LVMThinPoolDevice
+				LVMThinLogicalVolumeDevice
+			DMRaidArrayDevice
+			MultipathDevice
+		MDRaidArrayDevice
+		NoDevice
+			TmpFSDevice
+		FileDevice
+			SparseFileDevice
+			DirectoryDevice
+		LoopDevice
+		OpticalDevice
+		NFSDevice(StorageDevice,NetworkStorageDevice)
+		BTRFSDevice
+			BTRFSVolumeDevice
+			BTRFSSubVolumeDevice
+
+NetworkStorageDevice(object)
+

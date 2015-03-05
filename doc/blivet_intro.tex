@@ -1,0 +1,249 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{paralist}
+
+\begin{document}
+%\lstset{numbers=left,numberstyle=\tiny,keywordstyle=\color{blue!70},commentstyle=\color{red!50!green!50!blue!50},frame=shadowbox, rulesepcolor=\color{red!20!green!20!blue!20},escapeinside=``,xleftmargin=2em,xrightmargin=2em, aboveskip=1em}
+\lstset{numbers=left,framexleftmargin=10mm,frame=none,backgroundcolor=\color[RGB]{245,245,244},keywordstyle=\bf\color{blue},identifierstyle=\bf,numberstyle=\color[RGB]{0,192,192},commentstyle=\it\color[RGB]{0,96,96},stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},showstringspaces=false}
+\title{\textbf{Blivet investigation report}}
+%\title{\textbf{How to use blivet on LPAR}}
+\author{Tao Wu}
+\date{\today}
+\maketitle
+\section{Introduction}
+
+Blivet is a python module for system storage configuration.\\
+
+A good feature of blivet is that we can use it to model a series of changes
+without necessarily committing any of the changes to disk. We can schedule an
+arbitrarily large series of changes, seeing the effects of each as it is
+scheduled. Nothing is written to disk, however, until you execute the actions.\\
+
+Version: 0.18.34 \\
+
+Installation:  yum install python-blivet libselinux-python\\
+\section{What does blivet provide}
+\begin{tabular}{|l|c|r|}
+\hline
+Function & Support & Remark\\
+\hline
+List devices & Y & \\
+Delete devices & Y & \\
+Partition-manually & Y & \\
+Partition-automation & Y & Not verified\\
+Format & Y & \\
+Mount & Y & \\
+Unmount & Y & \\
+Discover ZFCP/SCSI disks & Y & \\
+Create PV & Y & \\
+Create VG & Y & \\
+Create LV & Y & \\
+Resize & Y & Not verified\\
+Encrypt & Y & Not verified\\
+\hline
+\end{tabular}\\
+\clearpage
+
+Arch supported:\\
+\newline
+\begin{tabular}{|l|c|}
+\hline
+    Cell & Y\\
+    Mactel & Y\\
+    Efi & Y\\
+    \textcolor{red}{X86} & Y\\
+    PPC & Y\\
+    \textcolor{red}{S390} & Y\\
+    IA64 & Y\\
+    Alpha & Y\\
+    Sparc & Y\\
+    AARCH64 & Y\\
+    ARM & Y\\
+\hline
+\end{tabular}\\
+\\
+\\
+
+
+Filesystem supported:\\
+\newline
+\begin{tabular}{|l|c|}
+\hline
+Filesystem & Support \\
+\hline
+    \textcolor{red}{Ext2FS} & Y\\
+    \textcolor{red}{Ext3FS} & Y\\
+    \textcolor{red}{Ext4FS}& Y\\
+    FATFS & Y\\
+    EFIFS & Y\\
+    \textcolor{red}{BTRFS} & Y\\
+    GFS2 & Y\\
+    JFS & Y\\
+    ReiserFS & Y\\
+    \textcolor{red}{XFS} & Y\\
+    HFS & Y\\
+    AppleBootstrapFS & Y\\
+    HFSPlus & Y\\
+    NTFS & Y\\
+    NFS & Y\\
+    NFSv4 & Y\\
+    Swap & Y\\
+    Iso9660FS & Y\\
+    NoDevFS & Y\\
+    DevPtsFS & Y\\
+    ProcFS & Y\\
+    SysFS & Y\\
+    TmpFS & Y\\
+    BindFS & Y\\
+    SELinuxFS & Y\\
+    USBFS & Y\\
+\hline
+\end{tabular}
+
+\section{Basic methods we may need}
+Blivet supplies a great many methods to manipulate storage devices recognized
+by kernel. In the first instance, I think we should focus on the following ones
+which are sufficient enough to implement the functions refereed in section two.
+\begin{itemize}
+\item \textbf{blivet.Blivet.reset()} \\-Reset storage configuration to reflect
+actual system state.\\
+\item \textbf{blivet.devicetree.DeviceTree.getDeviceByName(name, incomplete=False, hidden=False)}\\-Return a device
+with a matching name.\\
+    \textbf{\textbf{Parameters:}}	\\
+        name (str) - the name to look for\\
+        incomplete (bool) - include incomplete devices in search\\
+        hidden (bool) - include hidden devices in search\\
+    \textbf{Returns:}	the first matching device found\\
+    \textbf{Return type:}	device\\
+\item \textbf{blivet.Blivet.recursiveRemove(device)}\\-Remove a device after removing its
+dependent devices.\\
+We use this method to destroy devices which are not leaves.\\
+\item \textbf{blivet.Blivet.initializeDisk(disk)}\\-(Re)initialize a disk by creating a disklabel on it.\\
+\textbf{Parameters:}	\\disk (StorageDevice) - the disk to initialize\\
+\textbf{Returns:} None\\
+\textbf{Raises:}	ValueError\\
+\item \textbf{blivet.Blivet.newPartition(*args, **kwargs)}\\-Return a new (unallocated) PartitionDevice
+instance.\\
+       \textbf{Parameters:}	\\
+       fmt\_type (str) - format type\\
+       fmt\_args (dict) - arguments for format constructor\\
+       mountpoint (str) - mountpoint for format (filesystem)\\
+\item \textbf{blivet.Blivet.createDevice(device)}\\ -Schedule creation of a device.\\
+    \textbf{Parameters:}\\	device (StorageDevice) - the device to schedule creation of\\
+    \textbf{Return type:}	None\\
+\item \textbf{blivet.formats.getFormat(fmt\_type, *args, **kwargs)}\\- Return an
+instance of the appropriate DeviceFormat class.\\
+    \textbf{Parameters:}	\\fmt\_type (str) - The name of the formatting type\\
+    \textbf{Returns:}	the format instance\\
+    \textbf{Return type:}	DeviceFormat\\
+    \textbf{Raises:}	ValueError\\
+\item \textbf{blivet.partitioning.doPartitioning(storage)}\\-Allocate and grow
+partitions.\\
+    \textbf{Parameters:}	\\storage (Blivet) - Blivet instance\\
+    \textbf{Raises:}	PartitioningError\\
+    \textbf{Returns:}	None\\
+\item \textbf{blivet.Blivet.formatDevice(device, fmt)}\\-Schedule formatting of a device.\\
+    \textbf{Parameters:}	\\
+        device (StorageDevice) - the device to create the formatting on\\
+        fmt - the format to create on the device\\
+    \textbf{Return type:}	None\\
+    A format destroy action will be scheduled first, so it is not necessary to
+create and schedule an ActionDestroyFormat prior to calling this method.\\
+\item \textbf{blivet.Blivet.newVG(*args, **kwargs)}\\- Return a new LVMVolumeGroupDevice
+instance.\\
+	\textbf{Parameters:}	\\
+    name (str) - the device name (generally a device node’s basename)\\
+    exists (bool) - does this device exist\\
+    parents (list of StorageDevice) – a list of parent devices\\
+    sysfsPath (str) - sysfs device path\\
+    peSize (Size) - physical extent size\\
+    \textbf{Returns:}	the new volume group device\\
+    \textbf{Return type:}	LVMVolumeGroupDevice\\
+\item \textbf{blivet.Blivet.newLV(*args, **kwargs)}\\- Return a new LVMLogicalVolumeDevice
+instance.\\
+    \textbf{Parameters:}	\\
+        fmt\_type (str) - format type\\
+        fmt\_args (dict) - arguments for format constructor\\
+        mountpoint (str) - mountpoint for format (filesystem)\\
+        thin\_pool (bool) - whether to create a thin pool\\
+        thin\_volume (bool) - whether to create a thin volume\\
+    \textbf{Returns:}	the new device\\
+    \textbf{Return type:}	LVMLogicalVolumeDevice\\
+\item \textbf{blivet.Blivet.doIt()}\\-Commit queued changes to disk.\\-Caution: Data on
+devices may be destroyed after this method succeeds.\\
+\item \textbf{blivet.zfcp.ZFCP.addFCP(devnum, wwpn, fcplun)}\\-Manully online ZFCP/SCSI disks.\\
+    \textbf{Parameters:}	\\
+        devnum (str) - scsi disk number\\
+        wwpn (str) - world wide port name\\
+        fcplun (str) - logical unit number\\
+    \textbf{Return type:}	None\\
+\item \textbf{blivet.devicetree.populate(cleanupOnly=False)}\\- Locate all storage devices.\\
+Loop and scan for devices to build the device tree.\\
+
+\end{itemize}
+
+\section{A simple example on LPAR11}
+
+\begin{lstlisting}[language=python]
+import blivet
+
+b=blivet.Blivet()
+b.reset()
+
+#initialize disk
+dasdb=b.devicetree.getDeviceByName("dasdb")
+b.recursiveRemove(dasdb)
+b.initializeDisk(dasdb)
+
+#create new PV
+part=b.newPartition(size=8000,parents=[dasdb])
+b.createDevice(part)
+fmt=blivet.formats.getFormat("lvmpv",lable="pv1")
+b.formatDevice(part,fmt)
+blivet.partitioning.doPartitioning(b)
+b.doIt()
+
+# create new VG
+a=b.pvs
+request=b.newVG(parents=a)
+b.createDevice(request)
+b.doIt()
+
+#create new LV
+a=b.vgs
+request=b.newLV(size=2500,name="lv1",parents=a)
+b.createDevice(request)
+fmt=blivet.formats.getFormat("ext4",lable="test1",
+    mountpoint="/home/test1")
+b.formatDevice(request,fmt)
+blivet.partitioning.doPartitioning(b)
+b.doIt()
+
+fmt.mount()
+
+#discover scsi devices
+a=b.zfcp
+a.addFCP("0.0.5080","0x500507630300c52a",
+		"0x4013401300000000")
+b.devicetree.populate()
+\end{lstlisting}
+\section{Discovery of ZFCP disks}
+To manually online ZFCP disks, first of all we invoke the addFCP() methods refered
+in Section three. We can also put these arguments in a configure file as anaconda
+does. Then we use populate() to add the ZFCP disk to devicetree so that blivet
+can see it.\\
+\newline
+In order to get the arguments needed, we can use some tools such as: \\
+udevadm info -a -p /sys/class/scsi\_generic/sg0
+\section{What to do in the next stage}
+\begin{enumerate}
+\item Do as much tests as more to make sure blivet work smoothly on all kinds of
+disk status (encrypted?  mounted? have some children devices? have some special
+data on it being used?  etc.)
+\item Continue to explore blivet codes and dig out some useful methods.
+\end{enumerate}
+\end{document}

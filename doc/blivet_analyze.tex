@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{paralist}
+
+\begin{document}
+%\lstset{numbers=left,numberstyle=\tiny,keywordstyle=\color{blue!70},commentstyle=\color{red!50!green!50!blue!50},frame=shadowbox, rulesepcolor=\color{red!20!green!20!blue!20},escapeinside=``,xleftmargin=2em,xrightmargin=2em, aboveskip=1em}
+\lstset{numbers=left,framexleftmargin=10mm,frame=none,backgroundcolor=\color[RGB]{245,245,244},keywordstyle=\bf\color{blue},identifierstyle=\bf,numberstyle=\color[RGB]{0,192,192},commentstyle=\it\color[RGB]{0,96,96},stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},showstringspaces=false}
+\title{\textbf{Blivet analysis}}
+\author{Tao Wu}
+\date{\today}
+\maketitle
+
+
+\section{Introduction}
+Blivet provides an easy access to disk management, including partitioning on
+disks, making format such as ext4,ext3 or xfs on partitions, creating pv/vg/lv
+and so on.  This article focus on the internal implement of blivet, which will
+help users to locate source of bugs more quickly.
+  
+  A normal work flow of blivet is as follows:
+\begin{itemize}
+\item Collect device information from udev and build a device tree
+\item Get info from device tree or change device tree and create actions
+\item Use partition algorithm to do partition inside device tree
+\item Process actions in device tree so that changes can be written into disks
+\end{itemize}
+
+\section{Build device tree}
+
+The device tree is created through populate() method:
+1. set maximal waiting time to 300 secends for udev to be done.
+2. addUdevDevice
+     add udevXXXdevice
+3. handleUdevDeviceFormat
+     handleUdevXXXFormat
+\subsection{libudev intro}
+\subsection{devices intro}
+\subsection{formats intro}
+\subsection{devicetree structure}
+get devices:\\
+    def getDeviceBySysfsPath(self, path, incomplete=False, hidden=False):\\
+    def getDeviceByUuid(self, uuid, incomplete=False, hidden=False):\\
+    def getDeviceByLabel(self, label, incomplete=False, hidden=False):\\
+    def getDeviceByName(self, name, incomplete=False, hidden=False):\\
+    def getDeviceByPath(self, path, preferLeaves=True, incomplete=False, hidden=False):\\
+    def getDeviceByID(self, id\_num, hidden=False):\\
+    def getDevicesByType(self, device\_type):\\
+    def getDevicesByInstance(self, device\_class):\\
+    def getDevicesBySerial(self, serial, incomplete=False, hidden=False):\\
+\\
+add device:\\
+    def addUdevLVDevice(self, info):\\
+    def addUdevDMDevice(self, info):\\
+    def addUdevMultiPathDevice(self, info):\\
+    def addUdevMDDevice(self, info):\\
+    def addUdevPartitionDevice(self, info, disk=None):\\
+    def addUdevDiskDevice(self, info):\\
+    def addUdevOpticalDevice(self, info):\\
+    def addUdevLoopDevice(self, info):\\
+    def addUdevDevice(self, info):\\
+\\
+handle format:\\
+    def handleUdevDeviceFormat(self, info, device):\\
+    def handleUdevDiskLabelFormat(self, info, device):\\
+    def handleUdevLVMPVFormat(self, info, device):\\
+    def handleVgLvs(self, vg\_device):\\
+    def handleUdevLUKSFormat(self, info, device):\\
+    def handleUdevMDMemberFormat(self, info, device):\\
+    def handleUdevDMRaidMemberFormat(self, info, device):\\
+    def handleBTRFSFormat(self, info, device):\\
+\\
+actions:\\
+    def pruneActions(self):\\
+    def sortActions(self):\\
+    def processActions(self, dryRun=None):\\
+    def registerAction(self, action):\\
+    def cancelAction(self, action):\\
+    def findActions(self, device=None, type=None, object=None, path=None,\\
+\\
+other:\\
+    def devices(self):\\
+    def filesystems(self):\\
+    def uuids(self):\\
+    def labels(self):\\
+    def leaves(self):\\
+
+
+
+\section{Do partition}
+
+Blivet use blivet.partitioning.doPartitioning() method to (re)configure all the
+partition requests so that each of them can get a proper location on the disks.
+\subsection{sort requests}
+\subsection{remove new partitions}
+\subsection{allocate partitions}
+\subsection{grow partitions}
+\subsection{manageSizeSet}
+
+
+\section{Write changes to disks}
+Blivet.doIt()
+devicetree.processActions()<++>
+pruneActions()<++>
+sortActions()
+
+sorting actions using tsort
+
+\section{Device factory}
+
+
+\section{Other issue}
+1. When using recursiveRemove() on one disk, it will not remove the request on
+that disk, which may cause a bit choas. For example, you create two partitions
+on disk sdc without doIt, and then you decide to remove sdc, but you will find
+you have the two partitions on sdc created after you excute doIt, which is not
+what you really want.
+
+2. Partition algorithm.
+
+3. ManageSizeSet-float.
+
+3. Multipath discovery.
+
+\end{document}
