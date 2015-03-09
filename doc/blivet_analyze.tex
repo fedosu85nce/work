@@ -111,6 +111,48 @@ sorting actions using tsort
 
 \section{Device factory}
 
+in _init:
+facortyDevice(devicetype,size,kwargs)
+  get device factory
+  factory.configure
+return factory.device
+
+factory(blivet,size,disks,kwargs)
+
+configure():
+save device tree
+try: _configure
+if fail: revert devicetree
+
+_configure:
+set container
+  get container(device,container_name)
+     if device has a vg attribute:
+          container = this vg
+     elif has name
+        container_name is a vg in blivet.vgs
+          container = this vg(container_name)
+     else no device no name
+        if can get a list of all vgs in blivet.vg and it is not exist
+        get the biggest/smallest vg
+        container = this vg
+        else
+          container = None
+setup child factory:
+  get args
+    get total space
+    get disks
+  get kwargs
+	get child factory fstype -defined in the class
+child factory.config() -reconfigure/create several pvs
+  #this might change container's disks(pvs) only if we adjust a device
+reconfigure/create container  -VG
+    adjust container to make it meet the child factory
+reconfigure/create device  -LV
+
+#pv just create once, and then can be resized by the totalsizeset when
+doPartitioning.
+
 
 \section{Other issue}
 1. When using recursiveRemove() on one disk, it will not remove the request on
@@ -118,11 +160,10 @@ that disk, which may cause a bit choas. For example, you create two partitions
 on disk sdc without doIt, and then you decide to remove sdc, but you will find
 you have the two partitions on sdc created after you excute doIt, which is not
 what you really want.
-
 2. Partition algorithm.
-
 3. ManageSizeSet-float.
-
 3. Multipath discovery.
+4. self._reconfigure_container in devicefactory.py seems do nothing.
+5. handle_no_size in device factory seems useless.
 
 \end{document}
