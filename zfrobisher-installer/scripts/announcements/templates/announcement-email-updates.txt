@@ -1,0 +1,48 @@
+IBM PowerKVM Host OS Internal Update Release @RELEASE_VER@ 
+
+* Minimal requirements: IBM PowerKVM @BASE_VER@ (GA)
+* These updates are primarily for internal consumption/testing. Once
+  validated, these updates should be made available in the official
+  product update channels.
+
+Changelog
+
+Bug xxxx - bug descriptiopn
+
+
+Updating IBM PowerKVM Packages from internal repositories
+
+You can update your existing IBM PowerKVM @PKVM_STREAM@ system with the latest development IBM PowerKVM rpm
+packages.
+
+Updates are available through GSA repository for IBM
+PowerKVM. If your system has direct access to it, you can use Yum. In
+case it does not, use the ibm-update-system utility, as instructed
+below.
+
+Before you update IBM PowerKVM, power off any guest virtual machines
+and stop any workloads. You are required to restart your system after
+you apply any updates.
+
+To update your existing IBM PowerKVM @PKVM_STREAM@ using yum, follow these steps:
+
+     Make sure your system has connectivity to pokgsa.ibm.com, from within PowerKVM host.
+     Download repository file:
+         # wget http://pokgsa.ibm.com/projects/p/pkvm-updates/devel/IBM/powerkvm-devel.repo -O /etc/yum.repos.d/powerkvm-devel.repo
+     Use the yum command to produce a list of available updates. For example:
+         # yum update
+     Review the list of packages and enter Y if you agree.
+
+To update your existing IBM PowerKVM @PKVM_STREAM@ using the ibm-update-system utility, follow these
+steps:
+
+     Download the IBM PowerKVM update ISO image from
+     @ISO_URL@
+     and upload this ISO image to your PowerKVM system, in a location of your
+     choice.
+
+     Run the following command:
+         # ibm-udpate-system --iso-path=path_to_file
+
+     Replace path_to_file with the path to the ISO file containing the updates.
+     Review the packages marked for update, and agree by entering Y.

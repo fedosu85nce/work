@@ -1,0 +1,204 @@
+[[TableOfContents]]
+
+= WARNING =
+
+ 1. As of build 15 (BETA7), the install process does not require SELinux to be disabled.  Please remove any references to selinux=0 boot parameter from your existing install processes.
+
+= Download =
+ 1. Netboot
+  * Download the ISO image and follow the procedure described bellow (Instructions for netboot).
+   * [@ISO_URL@ @ISO_NAME@]
+   * MD5SUM: @ISO_MD5@
+
+ 1. DVD Boot
+  * Follow this if you want to download only the dvd version.
+   * [@ISO_URL@ @ISO_NAME@]
+   * MD5SUM: @ISO_MD5@
+
+ 1. NFS boot (Manufacturing only)
+  * Follow this if you want to download only the dvd version.
+   * [@ISO_URL@ @ISO_NAME@]
+   * MD5SUM: @ISO_MD5@
+
+ 1. HTTP boot from petitboot
+  * @LTCPHX_OS_URL@
+   * Instructions below
+
+== Instructions for Netboot ==
+ * You will need a DHCP/TFTP (BOOTP) server, as well as a web server
+ * After downloading @ISO_NAME@, mount loop it and unpack it into some folder within your HTTP server www root structure (say wwwroot):
+{{{
+ cd <folder-where-the-iso-is>
+ mkdir ./iso
+ sudo mount -o loop @ISO_NAME@ ./iso
+ cp -a ./iso/* <path-to-wwwroot>
+}}}
+ * Create the petitboot.conf file in a folder under your tftproot, say /tftproot/powerkvm, with the following contents :
+{{{
+ label PowerKVM Automated Install
+   kernel http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/ppc/ppc64/vmlinuz
+   initrd http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/ppc/ppc64/initrd.img
+   append root=live:http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/LiveOS/squashfs.img repo=http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/packages rd.dm=0 rd.md=0 console=hvc0 console=tty0
+}}}
+ * Edit your dhcpd.conf
+  * Set this directive at the beginning
+{{{
+ option conf-file code 209 = text;
+}}}
+ * Add the system directive
+{{{
+ host <your-system> {
+    hardware ethernet <system macaddr>
+    fixed-address <system ip>;
+    option host-name "<system hostname>";
+    option conf-file "<powerkvm/petitboot.conf>";
+ }
+}}}
+ * Reboot the dhcp server
+ * Boot your PowerLinux machine
+ * There should be the following option at petitboot (select it):
+  * "Power KVM Automated Install"
+ * The installer menu should appear automatically
+
+== Instructions for HTTP Boot ==
+
+ 1. HTTP Boot
+  * The contents is available at @LTCPHX_OS_URL@
+  * To use it, follow these steps:
+   A. Clear out BSO access to Austin labs
+   A. Boot to petitboot menu
+   A. Create a new option (press o)
+   A. Fill out the form as indicated below:
+   A. Press Enter to accept. You should be taken to the main menu
+   A. Select the option you just created and boot from it.
+{{{
+Petitboot Option Editor
+──────────────────────────────────────────────────────────────────────────────
+Kernel: @LTCPHX_OS_URL@ppc/ppc64/vmlinuz
+Initrd: @LTCPHX_OS_URL@ppc/ppc64/initrd.img
+Device tree:
+Boot arguments: root=live:@LTCPHX_OS_URL@LiveOS/squashfs.img repo=@LTCPHX_OS_URL@packages rd.dm=0 rd.md=0 console=hvc0 console=tty0
+}}}
+
+
+== Instructions for DVD ==
+ * Boot the ISO @ISO_NAME@ (either burn a DVD or make it virtual if using QEMU) and simply wait the boot.
+ * There should be the following option at petitboot (select it):
+  * "POWERKVM_LIVECD"
+ * The installer menu should appear automatically
+
+== Instructions for NFS Boot (Manufacturing only) ==
+ * Configure your TFTP and DHCP and copy the kernel (vmlinuz) and initrd into it as covered in Netboot.
+ * Configure your NFS server.
+ * Copy the PowerKVM ISO into a NFS folder.
+ * Adjust petitboot.conf to your webserver configuration
+{{{
+ label PowerKVM Automated Install
+   kernel http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/ppc/ppc64/vmlinuz
+   initrd http://YOUR-SERVER-IP/SOME-PATH-TO-wwwroot/ppc/ppc64/initrd.img
+   append root=nfs:NFS-ADDRESS:/PATH/TO/@ISO_NAME@ rd.dm=0 rd.md=0 console=hvc0 console=tty0
+}}}
+ * Boot your PowerLinux machine
+ * There should be the following option at petitboot (select it):
+  * "PowerKVM Automated Install"
+ * The installer menu should appear automatically
+
+= Installing (in general) =
+ * The installer will be displayed automatically when console is hvc0.
+  * Select the disk to install.
+  * Wait the process finishes.
+  * A window will ask for Root password.
+   * Root password must have at least 6 characters.
+  * Next, setup the timezone and UTC for the installed system.
+  * Reboot the system.
+ * If you exit to rescue mode, enter "exit" to get the installer back.
+
+= Reinstalling =
+ * It is possible to reinstall the system. Instead of a fresh install, reinstall will keep log a data partitions untouched, cleaning only 'root', 'swap' and 'boot' partitions and make a full installation on them.
+  * Boot the PowerKVM iso.
+  * Select 'Reinstall PowerKVM'.
+  * Wait the process finishes.
+  * A window will ask for Root password.
+   * Root password must have at least 6 characters.
+  * Next, setup the timezone and UTC for the installed system.
+  * Reboot the system.
+
+= Automatic Process =
+/!\ Automatic process can only be executed on hvc0 console, as the one used by ipmitool and qemu with -nographic option.
+ * All options presented can be performed in a unattended way. To accomplish that you only need to pass some boot parameters:
+
+   A. It is also possible to provide a "kickstart-like" file, as a boot line parameter. The format must be:
+   * Boot parameter for the configuration file: kvmp.inst.auto=<path_to_config_file>
+    * NOTE: the path_to_config_file can be {http,tftp,nfs}://path.to.config/file
+     * For instance:
+    {{{
+HTTP => kvmp.inst.auto=http://SERVER//path/to/kickstart.ks
+TFTP => kvmp.inst.auto=tftp://SERVER//path/to/kickstart.ks
+NFS  => kvmp.inst.auto=nfs:SERVER:/path/to/kickstart.ks
+    }}}
+    * The kickstart options supported are:
+     * pre-install scripts
+     {{{
+%pre
+<some shell script>
+%end
+     }}}
+     * post-install scripts
+     {{{
+%post
+<some shell script>
+%end
+     }}}
+     * partition (mandatory), in the following format:
+      . ''partition / --ondisk=<target-disk>''
+      . ''(in order to figure out the target disk, it is suggested that you boot once, in manual installation mode, and spot the options presented by the installer) ''
+     * network (mandatory), in the following format:
+      . ''network --device <target-nic> --bootproto dhcp''
+      . or
+      . ''network --device ''''''<target-nic>'' --bootproto static --ip=10.34.102.222 --netmask=255.255.255.0 --gateway=10.34.102.254'' ''
+      . (in order to figure out the target nic, it is suggested that you boot once, in manual installation mode, and spot the options presented by the installer)'' ''
+     * root password, in the following format:
+      . rootpw --iscrypted <password_in_sha-512_format>'' ''
+      . or
+      . rootpw <plain_text_password>
+     * timezone, in the following format:
+      . timezone <timezone>'' ''
+     * Installer language, in the following format:
+      . lang <language>
+      . <language> can be one of pt_BR, zh_CN, zh_TW, fr_FR, de_DE, it_IT, Ja_JP, ko_KR, ru_RU, es_ES, en_US
+    A. Example:
+     {{{
+%pre
+%end
+partition / --ondisk=/dev/sda
+network --device enP0s0 --ip=192.168.122.121 --netmask=255.255.255.0 --gateway=192.168.122.1
+network --device enP0s1 --ip=192.168.120.121 --netmask=255.255.255.0 --gateway=192.168.120.1
+network --device enP0s2 --bootproto dhcp
+network --device enP0s3 --ip=192.168.120.122 --netmask=255.255.255.0 --gateway=192.168.120.1 --nodefroute
+rootpw --iscrypted $6$E3HdbFhvRhDqGz5$NKigeup./xFX2hi0Fi7NC3edO8VR5CcFGChUsSWVYuuI0BY5T.BMpQrHIiKUEEnAiu2PM4KvIsgpVf4Jx98zi0
+timezone Asia/Tokyo
+%post
+%end
+     }}}
+    * In this example, the crypted root password is linux99
+   * In the installed system:
+    * Logs will be in /opt/ibm/powerkvm/logs/
+    * The kickstart will be in /opt/ibm/powerkvm/kickstart/
+    * Scripts (post and pre install) will be in /opt/ibm/powerkvm/scripts/
+
+= Configuring the Installed System =
+ * After the installation itself, the installed system will be auto-configured. The default parameters are:
+  * root password: passw0rd
+  * timezone: America/New_York
+  * network: dhcp
+ * If you still would like to configure beyond those defaults, you can manually edit the files by yourself (if you understand what you are doing), or:
+  1. Use a help configuration tool, after rebooted into the installed system
+   * On the installed system, login as root (passw0rd).
+   * Run "ibm-configure-system" at the command line.
+   * The program will guide you to configure the system.
+
+= Requirements =
+ * Disk >= 70GB of space available
+
+= Questions =
+ * For any questions, please post a message to powerkvm@lists.linux.ibm.com

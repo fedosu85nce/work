@@ -1,0 +1,900 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-08 13:49+BRT\n"
+"PO-Revision-Date: 2014-05-08 13:50-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: UTF-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: controller/__data__.py:7
+msgid "ERROR: Cannot detect installed system, impossible to upgrade"
+msgstr ""
+"ERRO: Não é possível detectar o sistema instalado, impossível fazer upgrade"
+
+#: controller/__data__.py:8
+msgid "ERROR: Cannot detect installed system version, impossible to upgrade"
+msgstr ""
+"ERRO: Não é possível detectar a versão do sistema instalado, impossível fazer upgrade"
+
+#: controller/__data__.py:9
+msgid "ERROR: Cannot fast forward upgrades, impossible to upgrade"
+msgstr ""
+"ERRO: Não é possível avançar upgrades, impossível fazer upgrade"
+
+#: controller/__data__.py:10
+msgid "ERROR: Installed system is newer, impossible to upgrade"
+msgstr ""
+"ERRO: O sistema instalado é mais recente, impossível fazer upgrade"
+
+#: controller/__data__.py:11
+msgid "ERROR: Upgrade failed."
+msgstr ""
+"ERRO: Falha no upgrade."
+
+#: controller/__data__.py:12
+msgid "Error while installing IBM PowerKVM into disk %s"
+msgstr ""
+"Erro ao instalar o IBM PowerKVM no disco %s"
+
+#: controller/__data__.py:13
+msgid "Formatting disks..."
+msgstr ""
+"Formatando discos..."
+
+#: controller/__data__.py:14
+msgid "Formatting root device to reinstall system"
+msgstr ""
+"Formatando o dispositivo raiz para reinstalar o sistema"
+
+#: controller/__data__.py:15
+msgid "Installing IBM PowerKVM into disk %s..."
+msgstr ""
+"Instalando o IBM PowerKVM no disco %s..."
+
+#: controller/__data__.py:16
+msgid "Install IBM PowerKVM"
+msgstr ""
+"Instalar o IBM PowerKVM"
+
+#: controller/__data__.py:17
+msgid "Proceed to upgrade the system?"
+msgstr ""
+"Continuar a fazer upgrade do sistema?"
+
+#: controller/__data__.py:18
+msgid "Reinstall IBM PowerKVM"
+msgstr ""
+"Reinstalar o IBM PowerKVM"
+
+#: controller/__data__.py:19
+msgid "Rescue mode (goes to terminal)"
+msgstr ""
+"Modo de resgate (acessa o terminal)"
+
+#: controller/__data__.py:20
+msgid "Running Post Upgrade Scripts"
+msgstr ""
+"Executando scripts de pós-upgrade"
+
+#: controller/__data__.py:21
+msgid "System Installed. Starting post install scripts."
+msgstr ""
+"Sistema instalado. Iniciando scripts de pós-instalação."
+
+#: controller/__data__.py:22
+msgid "Upgrade concluded!"
+msgstr ""
+"Upgrade concluído!"
+
+#: controller/__data__.py:23
+msgid "Upgrade installed IBM PowerKVM"
+msgstr ""
+"O upgrade instalou o IBM PowerKVM"
+
+#: controller/__data__.py:24
+msgid "Getting disk information..."
+msgstr ""
+"Obtendo informações do disco..."
+
+#: ui/__data__.py:6 viewer/__data__.py:36
+msgid "Root Password"
+msgstr ""
+"Senha root"
+
+#: ui/__data__.py:7
+msgid "Timezone selection"
+msgstr ""
+"Seleção de fuso horário"
+
+#: ui/__data__.py:8
+msgid "Date and Time"
+msgstr ""
+"Data e hora"
+
+#: ui/__data__.py:9
+msgid "Configure Network"
+msgstr ""
+"Configurar rede"
+
+#: ui/__data__.py:10
+msgid "DNS configuration"
+msgstr ""
+"Configuração de DNS"
+
+#: ui/__data__.py:11
+msgid "Exit"
+msgstr ""
+"Sair"
+
+#: viewer/__data__.py:12
+msgid "Welcome to IBM PowerKVM %s"
+msgstr ""
+"Bem-vindo ao IBM PowerKVM %s"
+
+#: viewer/__data__.py:13
+msgid "Select one of the options below and follow the instructions."
+msgstr ""
+"Selecione uma das opções abaixo e siga as instruções."
+
+#: viewer/__data__.py:14
+msgid ""
+"Are you sure you want to install on device %s?\n\n The following partitions will be removed: %s\n\n The following LVMs will be removed: %s\n\n"
+msgstr ""
+"Tem certeza de que deseja instalar no dispositivo %s?\n\n As partições a seguir serão removidas: %s\n\n Os LVMs a seguir serão removidos: %s\n\n"
+
+#: viewer/__data__.py:17
+msgid "IBM PowerKVM %s"
+msgstr ""
+"IBM PowerKVM %s"
+
+#: viewer/__data__.py:18
+msgid "Ok"
+msgstr ""
+"Ok"
+
+#: viewer/__data__.py:19
+msgid "Back"
+msgstr ""
+"Voltar"
+
+#: viewer/__data__.py:20
+msgid "Skip"
+msgstr ""
+"Ignorar"
+
+#: viewer/__data__.py:21
+msgid "Next"
+msgstr ""
+"Avançar"
+
+#: viewer/__data__.py:22
+msgid "Edit"
+msgstr ""
+"Editar"
+
+#: viewer/__data__.py:23
+msgid "  <Tab>/<Shift-Tab> between elements   |  <Space> selects"
+msgstr ""
+"  <Tab>/<Shift-Tab> entre elementos   |  <Espaço> seleciona"
+
+#: viewer/__data__.py:29
+msgid "Password Length"
+msgstr ""
+"Comprimento da senha"
+
+#: viewer/__data__.py:30
+msgid "The root password must be at least 6 characters long."
+msgstr ""
+"A Senha root deve ter pelo menos 6 caracteres."
+
+#: viewer/__data__.py:31
+msgid "Password Mismatch"
+msgstr ""
+"Incompatibilidade de senha"
+
+#: viewer/__data__.py:32
+msgid "The passwords you entered were different. Please try again."
+msgstr ""
+"As senhas inseridas eram diferentes. Tente novamente."
+
+#: viewer/__data__.py:33
+msgid "Password (confirm):"
+msgstr ""
+"Senha (confirmar):"
+
+#: viewer/__data__.py:34
+msgid "Password:"
+msgstr ""
+"Senha:"
+
+#: viewer/__data__.py:35
+msgid "Pick a root password. You must type it twice to ensure you know what it is and didn't make a mistake in typing. Remember that the root password is a critical part of system security!"
+msgstr ""
+"Selecione uma senha root. Deve-se digitá-la duas vezes para assegurar que você a conheça e não cometeu um erro ao digitar. Lembre-se de que a senha root é uma parte crítica da segurança do sistema!"
+
+#: viewer/__data__.py:41
+msgid "Select the timezone for the system"
+msgstr ""
+"Selecione o fuso horário para o sistema"
+
+#: viewer/__data__.py:42
+msgid "System clock uses UTC"
+msgstr ""
+"O relógio do sistema usa UTC"
+
+#: viewer/__data__.py:43
+msgid "Timezone Selection"
+msgstr ""
+"Seleção de fuso horário"
+
+#: viewer/__data__.py:48
+msgid "Select the device to be configured:"
+msgstr ""
+"Selecione o dispositivo a ser configurado:"
+
+#: viewer/__data__.py:49
+msgid "Configure network"
+msgstr ""
+"Configurar rede"
+
+#: viewer/__data__.py:50
+msgid "UP"
+msgstr ""
+"ATIVO"
+
+#: viewer/__data__.py:51
+msgid "DOWN"
+msgstr ""
+"INATIVO"
+
+#: viewer/__data__.py:56
+msgid "Hostname"
+msgstr ""
+"Nome do host"
+
+#: viewer/__data__.py:57
+msgid "Primary DNS"
+msgstr ""
+"DNS primário"
+
+#: viewer/__data__.py:58
+msgid "Secondary DNS"
+msgstr ""
+"DNS secundário"
+
+#: viewer/__data__.py:59
+msgid "Search"
+msgstr ""
+"Procurar"
+
+#: viewer/__data__.py:60
+msgid "DNS Configuration"
+msgstr ""
+"Configuração de DNS"
+
+#: viewer/__data__.py:65
+msgid "NTP Configuration"
+msgstr ""
+"Configuração do NTP"
+
+#: viewer/__data__.py:66
+msgid "NTP server 1: "
+msgstr ""
+"Servidor NTP 1: "
+
+#: viewer/__data__.py:67
+msgid "NTP server 2: "
+msgstr ""
+"Servidor NTP 2: "
+
+#: viewer/__data__.py:68
+msgid "NTP server 3: "
+msgstr ""
+"Servidor NTP 3: "
+
+#: viewer/__data__.py:69
+msgid "NTP server 4: "
+msgstr ""
+"Servidor NTP 4: "
+
+#: viewer/__data__.py:70
+msgid "Enable"
+msgstr ""
+"Ativar"
+
+#: viewer/__data__.py:75
+msgid "Date and time configuration"
+msgstr ""
+"Data e hora da configuração"
+
+#: viewer/__data__.py:76
+msgid "Date (YYYY / MM / DD):"
+msgstr ""
+"Data (AAAA / MM / DD):"
+
+#: viewer/__data__.py:77
+msgid "Time (HH:MM:SS):"
+msgstr ""
+"Hora (HH:MM:SS):"
+
+#: viewer/__data__.py:78
+msgid "Date time error"
+msgstr ""
+"Erro de data e hora"
+
+#: viewer/__data__.py:79
+msgid ""
+"Date or time format is not correct!\nThe input: %s\nCorrect format: YYYY/MM/DD HH:MM:SS"
+msgstr ""
+"O formato de data ou hora não está correto!\nA entrada: %s\nFormato correto: AAAA/MM/DD HH:MM:SS"
+
+#: viewer/__data__.py:85
+msgid "Invalid Entry"
+msgstr ""
+"Entrada Inválida"
+
+#: viewer/__data__.py:86
+msgid "Either DHCP must be selected, or IP must be provided."
+msgstr ""
+"DHCP deve ser selecionado ou IP deve ser fornecido."
+
+#: viewer/__data__.py:87
+msgid "Device"
+msgstr ""
+"Dispositivo"
+
+#: viewer/__data__.py:88
+msgid "MAC Address"
+msgstr ""
+"Endereço MAC"
+
+#: viewer/__data__.py:89
+msgid "Use DHCP"
+msgstr ""
+"Usar DHCP"
+
+#: viewer/__data__.py:90
+msgid "Static IP"
+msgstr ""
+"IP estático"
+
+#: viewer/__data__.py:91
+msgid "Netmask"
+msgstr ""
+"Máscara de rede"
+
+#: viewer/__data__.py:92
+msgid "Default gateway IP"
+msgstr ""
+"IP de gateway padrão"
+
+#: viewer/__data__.py:93
+msgid "Network Device Configuration"
+msgstr ""
+"Configuração do dispositivo de rede"
+
+#: viewer/__data__.py:94
+msgid "Create Network bridge device (br%s)"
+msgstr ""
+"Criar dispositivo de ponte de rede (br%s)"
+
+#: viewer/__data__.py:98
+msgid "Error while trying to remove the Volume Group in %s"
+msgstr ""
+"Erro ao tentar remover o Grupo de Volumes em %s"
+
+#: viewer/__data__.py:99
+msgid "The disk %s is part of the LVM Volume Group(s) ['VolGroup'] which will be destroyed if you continue. Are you sure you want to use that disk?"
+msgstr ""
+"O disco %s faz parte do(s) grupo(s) de volumes LVM ['VolGroup'] que será(ão) destruído(s) se você continuar. Tem certeza de que deseja usar esse disco?"
+
+#: viewer/__data__.py:100
+msgid "Yes"
+msgstr ""
+"Sim"
+
+#: viewer/__data__.py:101
+msgid "No"
+msgstr ""
+"Não"
+
+#: viewer/__data__.py:102
+msgid "Installation Error"
+msgstr ""
+"Erro de instalação"
+
+#: viewer/__data__.py:107
+msgid "Select the device to install IBM PowerKVM. All data in the selected disk will be lost."
+msgstr ""
+"Selecione o dispositivo para instalar o IBM PowerKVM. Todos os dados no disco selecionado serão perdidos."
+
+#: viewer/__data__.py:108
+msgid "Disk information"
+msgstr ""
+"Informações do disco"
+
+#: viewer/__data__.py:109
+msgid "  <Tab>/<Shift-Tab> between elements  |  <F3> for details"
+msgstr ""
+"  <Tab>/<Shift-Tab> entre elementos  |  <F3> para obter detalhes"
+
+#: viewer/__data__.py:110
+msgid "Disk size"
+msgstr ""
+"Tamanho do disco"
+
+#: viewer/__data__.py:111
+msgid "The disk size must be greater than 70G!"
+msgstr ""
+"O tamanho do disco deve ser superior a 70 G!"
+
+#: viewer/__data__.py:112
+msgid "No disk found"
+msgstr ""
+"Nenhum disco localizado"
+
+#: viewer/__data__.py:113
+msgid "No disks were found in the system."
+msgstr ""
+"Nenhum disco foi localizado no sistema."
+
+#: viewer/__data__.py:114
+msgid "ID:"
+msgstr ""
+"ID:"
+
+#: viewer/__data__.py:115
+msgid "Size"
+msgstr ""
+"Tamanho"
+
+#: viewer/__data__.py:116
+msgid "Multipath:"
+msgstr ""
+"Caminhos múltiplos:"
+
+#: viewer/__data__.py:117
+msgid "Name"
+msgstr ""
+"Nome"
+
+#: viewer/__data__.py:118
+msgid "Filesystem"
+msgstr ""
+"Sistema de arquivos"
+
+#: viewer/__data__.py:119
+msgid "VG/Raid"
+msgstr ""
+"VG/Raid"
+
+#: viewer/__data__.py:125
+msgid "Choose the language"
+msgstr ""
+"Escolha o idioma"
+
+#: viewer/__data__.py:130
+msgid "The current installed system will be erased, including all general system-wide and virtualization configuration files.Only the contents within /var/lib/libvirt/images and /var/log will be preserved. WARNING: this means the configuration of your Virtual Machines WILL BE ERASED, leaving only the disk images behind. You are advised to back up your VM configurations before proceeding. Are you sure you would like to proceed?"
+msgstr ""
+"O sistema instalado atual será apagado, incluindo todos os arquivos de configuração gerais do sistema e de virtualização. Somente o conteúdo em /var/lib/libvirt/images e /var/log será preservado. AVISO: isso significa que a configuração de suas máquinas virtuais SERÁ APAGADA, deixando apenas as imagens de disco ocultas. É aconselhável que você faça backup das configurações de VM antes de continuar. Tem certeza de que gostaria de continuar?"
+
+#: viewer/__data__.py:136
+msgid ""
+"A previous installation of PowerKVM has been detected at:\n"
+"\n"
+"%s\n"
+"\n"
+msgstr ""
+"Uma instalação anterior de PowerKVM foi detectada em:\n"
+"\n"
+"%s\n"
+"\n"
+
+#: viewer/__data__.py:141
+msgid "Hardware is not entitled to proceed. Aborting!"
+msgstr ""
+"O hardware não está autorizado a continuar. Interrompendo!"
+
+#: viewer/__data__.py:142
+msgid "Invalid entitlement! "
+msgstr ""
+"Autorização inválida! "
+
+#: viewer/__data__.py:147
+msgid "Preparing to install IBM PowerKVM System"
+msgstr ""
+"Preparando para instalar o Sistema IBM PowerKVM"
+
+#: viewer/__data__.py:148
+msgid "Unknown error"
+msgstr ""
+"Erro desconhecido"
+
+#: viewer/__data__.py:149
+msgid "Sorry something went wrong the proper error message is on the log file"
+msgstr ""
+"Ocorreu algo errado, a mensagem de erro adequada está no arquivo de log"
+
+#: viewer/__data__.py:155
+msgid "Please, reboot your system now."
+msgstr ""
+"Reinicialize seu sistema agora."
+
+#: viewer/__data__.py:156
+msgid "Reboot"
+msgstr ""
+"Reinicializar"
+
+#: viewer/__data__.py:157
+msgid "Installation completed! "
+msgstr ""
+"Instalação concluída! "
+
+#: viewer/__data__.py:162
+msgid "The reinstall process can't continue. No previous system was found. Aborting!"
+msgstr ""
+"O processo de reinstalação não pode continuar. Nenhum sistema anterior foi localizado. Interrompendo!"
+
+#: viewer/__data__.py:168
+msgid "Preparing to upgrade system"
+msgstr ""
+"Preparando para fazer upgrade do sistema"
+
+#: viewer/__data__.py:169
+msgid "Working..."
+msgstr ""
+"Trabalhando..."
+
+#: viewer/__data__.py:174
+msgid "Installation exited with error code: %s"
+msgstr ""
+"A instalação saiu com o código de erro: %s"
+
+#: viewer/__data__.py:175
+msgid "Log is available on %s"
+msgstr ""
+"O log está disponível em %s"
+
+#: viewer/__data__.py:176
+msgid "Unexpected error."
+msgstr ""
+"Erro inesperado."
+
+#: viewer/__data__.py:177
+msgid "Unknown error."
+msgstr ""
+"Erro desconhecido."
+
+#: viewer/__data__.py:178
+msgid "Invalid disk size."
+msgstr ""
+"Tamanho do disco inválido."
+
+#: viewer/__data__.py:179
+msgid "No disk found in the system."
+msgstr ""
+"Nenhum disco localizado no sistema."
+
+#: viewer/__data__.py:180
+msgid "Hardware is not entitled, aborting installation."
+msgstr ""
+"O hardware não está autorizado, interrompendo a instalação."
+
+#: viewer/__data__.py:181
+msgid "Error while installing IBM PowerKVM."
+msgstr ""
+"Erro ao instalar o IBM PowerKVM."
+
+#: viewer/__data__.py:182
+msgid "Error while performing disk operations."
+msgstr ""
+"Erro ao executar operações do disco."
+
+#: viewer/__data__.py:183
+msgid "Invalid error code."
+msgstr ""
+"Código de erro inválido."
+
+#: viewer/__data__.py:184
+msgid "Could not remove LVM entities."
+msgstr ""
+"Não foi possível remover entidades LVM."
+
+#: viewer/__data__.py:185
+msgid "Could not deactivate volume groups."
+msgstr ""
+"Não foi possível desativar grupos de volumes."
+
+#: viewer/__data__.py:186
+msgid "Could not activate volume groups."
+msgstr ""
+"Não foi possível ativar grupos de volumes."
+
+#: viewer/__data__.py:187
+msgid "Could not stop software RAID."
+msgstr ""
+"Não foi possível parar o RAID do software."
+
+#: viewer/__data__.py:188
+msgid "Disk information not available."
+msgstr ""
+"Informações do disco não disponíveis."
+
+#: viewer/__data__.py:189
+msgid "Problem while removing pratitioning scheme."
+msgstr ""
+"Problema ao remover o esquema de particionamento."
+
+#: viewer/__data__.py:190
+msgid "Problem while partitioning the disk."
+msgstr ""
+"Problema ao particionar o disco."
+
+#: viewer/__data__.py:191
+msgid "Problem while creating LVM."
+msgstr ""
+"Problema ao criar LVM."
+
+#: viewer/__data__.py:192
+msgid "Failed to download (HTTP) install automation file."
+msgstr ""
+"Falha ao fazer o download (HTTP) do arquivo de automação de instalação."
+
+#: viewer/__data__.py:193
+msgid "Failed to download (TFTP) install automation file."
+msgstr ""
+"Falha ao fazer o download (TFTP) do arquivo de automação de instalação."
+
+#: viewer/__data__.py:194
+msgid "Problem downloading (NFS) install automation file."
+msgstr ""
+"Falha ao fazer o download (NFS) do arquivo de automação de instalação."
+
+#: viewer/__data__.py:195
+msgid "Could not parse install automation file."
+msgstr ""
+"Não foi possível analisar o arquivo de automação de instalação."
+
+#: viewer/__data__.py:196
+msgid "Failed to get IPR RAID label."
+msgstr ""
+"Falha ao obter a etiqueta IPR RAID."
+
+#: viewer/__data__.py:197
+msgid "Failed while executing pre-install modules."
+msgstr ""
+"Falha ao executar os módulos de pré-instalação."
+
+#: viewer/__data__.py:198
+msgid "Failed to create disklabel on IPR RAID."
+msgstr ""
+"Falha ao criar disklabel em IPR RAID."
+
+#: viewer/__data__.py:199
+msgid "Failed to execute install automation pre-script."
+msgstr ""
+"Falha ao executar o pré-script de automação de instalação."
+
+#: viewer/__data__.py:200
+msgid "Failed to execute PowerKVM pre-script."
+msgstr ""
+"Falha ao executar o pré-script do PowerKVM."
+
+#: viewer/__data__.py:201
+msgid "Failed while executing post-install modules."
+msgstr ""
+"Falha ao executar módulos de pós-instalação."
+
+#: viewer/__data__.py:202
+msgid "Failed to set password."
+msgstr ""
+"Falha ao configurar a senha."
+
+#: viewer/__data__.py:203
+msgid "Failed to execute install automation post-script."
+msgstr ""
+"Falha ao executar o pós-script de automação de instalação."
+
+#: viewer/__data__.py:204
+msgid "Failed to set NTP service."
+msgstr ""
+"Falha ao configurar o serviço NTP."
+
+#: viewer/__data__.py:205
+msgid "Invalid network interface."
+msgstr ""
+"Interface de rede inválida."
+
+#: viewer/__data__.py:206
+msgid "Failed to write UTC time configuration."
+msgstr ""
+"Falha ao gravar a configuração de horário UTC."
+
+#: viewer/__data__.py:207
+msgid "Missing target network interface in install automation file."
+msgstr ""
+"Interface de rede de destino ausente no arquivo de automação de instalação."
+
+#: viewer/__data__.py:208
+msgid "Missing target disk parameter in install automation file."
+msgstr ""
+"Parâmetro de disco de destino ausente no arquivo de automação de instalação."
+
+#: viewer/__data__.py:209
+msgid "Error while installing packages."
+msgstr ""
+"Erro ao instalar pacotes."
+
+#: viewer/__data__.py:210
+msgid "No repository provided to the installer."
+msgstr ""
+"Nenhum repositório fornecido ao instalador."
+
+#: viewer/__data__.py:211
+msgid "Invalid repository path."
+msgstr ""
+"Caminho de repositório inválido."
+
+#: viewer/__data__.py:212
+msgid "Invalid repository content."
+msgstr ""
+"Conteúdo de repositório inválido."
+
+#: viewer/__data__.py:213
+msgid "Failed to load Timezones list."
+msgstr ""
+"Falha ao carregar a lista de Fusos Horários."
+
+#: viewer/__data__.py:214
+msgid "Firmware version must be greater than %s"
+msgstr ""
+"A versão de firmware deve ser maior que %s"
+
+#: viewer/__data__.py:215
+msgid "Invalid machine type."
+msgstr ""
+"Tipo de máquina inválido."
+
+#: viewer/__data__.py:216
+msgid "Invalid hypervisor."
+msgstr ""
+"Hypervisor inválido."
+
+#: viewer/__data__.py:217
+msgid "No previous system found."
+msgstr ""
+"Nenhum sistema anterior localizado."
+
+#: viewer/__data__.py:218
+msgid "Unexpected error while partitioning the disk."
+msgstr ""
+"Erro inesperado ao particionar o disco."
+
+#: viewer/__data__.py:219
+msgid "Unexpected error while installing packages."
+msgstr ""
+"Erro inesperado ao instalar pacotes."
+
+#: viewer/__data__.py:220
+msgid "Unexpected error while executing post-install modules."
+msgstr ""
+"Erro inesperado ao executar módulos de pós-instalação."
+
+#: viewer/__data__.py:221
+msgid "Unexpected error while executing kickstart."
+msgstr ""
+"Erro inesperado ao executar a instalação com kickstart."
+
+#: viewer/__data__.py:222
+msgid "Unexpected error while verifying disks."
+msgstr ""
+"Erro inesperado ao verificar discos."
+
+#: viewer/__data__.py:223
+msgid "Unexpected error while selecting disks."
+msgstr ""
+"Erro inesperado ao selecionar discos."
+
+#: viewer/__data__.py:224
+msgid "Unexpected error while configuring system."
+msgstr ""
+"Erro inesperado ao configurar o sistema."
+
+#: viewer/__data__.py:228
+msgid "Installation Summary"
+msgstr ""
+"Resumo da Instalação"
+
+#: viewer/__data__.py:229
+msgid "Timezone: "
+msgstr ""
+"Fuso Horário: "
+
+#: viewer/__data__.py:230
+msgid "Date/Time: "
+msgstr ""
+"Data/Hora: "
+
+#: viewer/__data__.py:231
+msgid "NTP servers"
+msgstr ""
+"Servidores NTP"
+
+#: viewer/__data__.py:232
+msgid "NTP disabled"
+msgstr ""
+"NTP desativado"
+
+#: viewer/__data__.py:233
+msgid "IP Address: "
+msgstr ""
+"Endereço IP: "
+
+#: viewer/__data__.py:234
+msgid "Gateway: "
+msgstr ""
+"Gateway: "
+
+#: viewer/__data__.py:235
+msgid "Netmask: "
+msgstr ""
+"Máscara de rede: "
+
+#: viewer/__data__.py:236
+msgid "Hostname: "
+msgstr ""
+"Nome do Host: "
+
+#: viewer/__data__.py:237
+msgid "Bridge: "
+msgstr ""
+"Ponte: "
+
+#: viewer/__data__.py:238
+msgid "DHCP is enabled"
+msgstr ""
+"O DHCP está ativado"
+
+#: viewer/__data__.py:239
+msgid "Network"
+msgstr ""
+"Rede"
+
+#: viewer/__data__.py:240
+msgid "Device: "
+msgstr ""
+"Dispositivo: "
+
+#: viewer/__data__.py:241
+msgid "Password is set"
+msgstr ""
+"A senha está configurada"
+
+#: viewer/__data__.py:242
+msgid "System clock uses UTC: "
+msgstr ""
+"O relógio do sistema usa UTC: "
+
+#: viewer/__data__.py:245
+msgid "I Accept both IBM and non-IBM terms"
+msgstr ""
+"Aceito os termos IBM e não-IBM"
+
+#: viewer/__data__.py:246
+msgid "I do not accept the terms in the license agreement"
+msgstr ""
+"Não aceito os termos no contrato de licença"
+
+
+# ENGL1SH_VERS10N 49670_14 DO NOT REMOVE OR CHANGE THIS LINE
+# T9N_SRC_ID 228
+# T9N_SH1P_STR1NG KVM21AAP001 6

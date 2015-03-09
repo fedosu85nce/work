@@ -1,0 +1,1 @@
+KERNEL=="hw_random", MODE="0644", NAME="hwrng"

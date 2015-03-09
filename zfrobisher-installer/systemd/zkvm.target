@@ -1,0 +1,10 @@
+[Unit]
+Description=zKVM System Services
+Requires=basic.target
+After=basic.target
+AllowIsolate=yes
+Wants=rsyslog.service
+Wants=systemd-udev-settle.service
+Wants=NetworkManager.service
+Wants=getty@.service zkvm-sshd.service
+Wants=zkvm-direct.service

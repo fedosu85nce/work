@@ -1,0 +1,115 @@
+#!/bin/env python
+
+import socket
+import struct
+import fcntl
+import logging
+import sys
+import os
+import subprocess
+
+class print_info():
+    def __init__(self):
+        self._log = self.init_logger()
+    def init_logger(self):
+        log = logging.getLogger("Installer")
+        handler = logging.StreamHandler(sys.stdout)
+        log.addHandler(handler)
+        log.setLevel(logging.INFO)
+        return log
+
+    def _run_program(self, argv, root='/', stdin=None, stdout=None, env_prune=None, log_output=True, binary_output=False):
+        """ Run an external program, log the output and return it to the caller
+            @param argv The command to run and argument
+            @param root The directory to chroot to before running command.
+            @param stdin The file object to read stdin from.
+            @param stdout Optional file object to write stdout and stderr to.
+            @param env_prune environment variable to remove before execution
+            @param log_output: whether to log the output of command
+            @param binary_output: whether to treat the output of command as binary data
+            @return The return code of the command and the output
+        """
+        if env_prune is None:
+            env_prune = []
+
+        def chroot():
+            if root and root != '/':
+                os.chroot(root)
+                os.chdir("/")
+
+        env = os.environ.copy()
+        for var in env_prune:
+            env.pop(var, None)
+
+        try:
+            proc = subprocess.Popen(argv,
+                                    stdin=stdin,
+                                    stdout=subprocess.PIPE,
+                                    stderr=subprocess.STDOUT,
+                                    preexec_fn=chroot, cwd=root, env=env)
+
+            output_string = proc.communicate()[0]
+            if output_string:
+                if binary_output:
+                    output_lines = [output_string]
+                else:
+                    if output_string[-1] != "\n":
+                        output_string = output_string + "\n"
+                    output_lines = output_string.splitlines(True)
+
+                for line in output_lines:
+                    if log_output:
+                        self._log.debug(line.strip())
+
+                    if stdout:
+                        stdout.write(line)
+
+        except OSError as e:
+            self._log.error("Error running %s: %s" % (argv[0], e.strerror))
+            raise
+
+        self._log.debug("Return code: %d" % proc.returncode)
+
+        return (proc.returncode, output_string)
+
+    def _execWithCapture(self, command, argv, stdin=None, stderr=None, root='/',
+                        fatal=False, log_output=True):
+        """ Run an external program and capture standard out and err.
+            @param command The command to run
+            @param argv The argument list
+            @param stdin The file object to read stdin from.
+            @param stderr not used
+            @param root The directory to chroot to before running command.
+            @param log_output Whether to log the output of command
+            @param fatal not used
+            @return The output of the command
+        """
+        argv = [command] + argv
+        return self._run_program(argv, stdin=stdin, root=root, log_output=log_output)[1]
+
+    def default_route_device(self):
+        routes = self._execWithCapture("ip", [ "route", "show"])
+        if not routes:
+            self._log.error("Could not get default route device")
+            return None
+
+        for line in routes.split("\n"):
+            if line.startswith("default"):
+                parts = line.split()
+                if parts[3] == "dev":
+                    return parts[4]
+                else:
+                    self._log.error("Could not parse default route device")
+                    return None
+
+        return None
+
+    def get_default_device_ip(self, ethname):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0X8915, struct.pack('256s', ethname[:15]))[20:24])
+
+if __name__ == '__main__':
+    pi = print_info()
+    ethname = pi.default_route_device()
+    ip = pi.get_default_device_ip(ethname)
+    pi._log.info(("Please ssh install@%s to begin the install.") % ip)

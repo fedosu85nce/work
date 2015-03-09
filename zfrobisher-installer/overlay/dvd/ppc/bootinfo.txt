@@ -1,0 +1,5 @@
+<chrp-boot>
+<description>IBM PowerKVM LiveCD</description>
+<os-name>IBM PowerKVM LiveCD</os-name>
+<boot-script>boot &device;:\ppc\chrp\yaboot</boot-script>
+</chrp-boot>

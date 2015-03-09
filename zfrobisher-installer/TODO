@@ -1,0 +1,4 @@
+./Makefile:51:	# TODO: installer must remove dependency on /boot/yaboot
+./Makefile:53:	# TODO: WORKAROUND to use fedora kernel/initrd - remove ASAP
+./Makefile:66:	# TODO: Download all frobisher packages automatically (create a rule in here)
+./scripts/create_rootfs_image.sh:18:# TODO: find image size dynamically based on rootfs size

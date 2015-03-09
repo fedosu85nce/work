@@ -1,0 +1,900 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-08 13:49+BRT\n"
+"PO-Revision-Date: 2014-05-08 13:50-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: UTF-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: controller/__data__.py:7
+msgid "ERROR: Cannot detect installed system, impossible to upgrade"
+msgstr ""
+"错误：无法检测已安装的系统，无法升级"
+
+#: controller/__data__.py:8
+msgid "ERROR: Cannot detect installed system version, impossible to upgrade"
+msgstr ""
+"错误：无法检测已安装的系统版本，无法升级"
+
+#: controller/__data__.py:9
+msgid "ERROR: Cannot fast forward upgrades, impossible to upgrade"
+msgstr ""
+"错误：无法快速推进升级，无法升级"
+
+#: controller/__data__.py:10
+msgid "ERROR: Installed system is newer, impossible to upgrade"
+msgstr ""
+"错误：已安装的系统较新，无法升级"
+
+#: controller/__data__.py:11
+msgid "ERROR: Upgrade failed."
+msgstr ""
+"错误：升级失败。"
+
+#: controller/__data__.py:12
+msgid "Error while installing IBM PowerKVM into disk %s"
+msgstr ""
+"将 IBM PowerKVM 安装到磁盘 %s 时出错"
+
+#: controller/__data__.py:13
+msgid "Formatting disks..."
+msgstr ""
+"正在对磁盘进行格式化..."
+
+#: controller/__data__.py:14
+msgid "Formatting root device to reinstall system"
+msgstr ""
+"正在对根设备进行格式化以重新安装系统"
+
+#: controller/__data__.py:15
+msgid "Installing IBM PowerKVM into disk %s..."
+msgstr ""
+"正在将 IBM PowerKVM 安装到磁盘 %s..."
+
+#: controller/__data__.py:16
+msgid "Install IBM PowerKVM"
+msgstr ""
+"安装 IBM PowerKVM"
+
+#: controller/__data__.py:17
+msgid "Proceed to upgrade the system?"
+msgstr ""
+"要继续升级系统吗？"
+
+#: controller/__data__.py:18
+msgid "Reinstall IBM PowerKVM"
+msgstr ""
+"重新安装 IBM PowerKVM"
+
+#: controller/__data__.py:19
+msgid "Rescue mode (goes to terminal)"
+msgstr ""
+"急救方式（转到终端）"
+
+#: controller/__data__.py:20
+msgid "Running Post Upgrade Scripts"
+msgstr ""
+"正在运行升级后脚本"
+
+#: controller/__data__.py:21
+msgid "System Installed. Starting post install scripts."
+msgstr ""
+"系统已安装。正在启动安装后脚本。"
+
+#: controller/__data__.py:22
+msgid "Upgrade concluded!"
+msgstr ""
+"升级结束！"
+
+#: controller/__data__.py:23
+msgid "Upgrade installed IBM PowerKVM"
+msgstr ""
+"升级过程安装了 IBM PowerKVM"
+
+#: controller/__data__.py:24
+msgid "Getting disk information..."
+msgstr ""
+"正在获取磁盘信息..."
+
+#: ui/__data__.py:6 viewer/__data__.py:36
+msgid "Root Password"
+msgstr ""
+"Root 用户密码"
+
+#: ui/__data__.py:7
+msgid "Timezone selection"
+msgstr ""
+"时区选择"
+
+#: ui/__data__.py:8
+msgid "Date and Time"
+msgstr ""
+"日期和时间"
+
+#: ui/__data__.py:9
+msgid "Configure Network"
+msgstr ""
+"配置网络"
+
+#: ui/__data__.py:10
+msgid "DNS configuration"
+msgstr ""
+"DNS 配置"
+
+#: ui/__data__.py:11
+msgid "Exit"
+msgstr ""
+"退出"
+
+#: viewer/__data__.py:12
+msgid "Welcome to IBM PowerKVM %s"
+msgstr ""
+"欢迎使用 IBM PowerKVM %s"
+
+#: viewer/__data__.py:13
+msgid "Select one of the options below and follow the instructions."
+msgstr ""
+"选择下面其中一个选项并遵循指示信息。"
+
+#: viewer/__data__.py:14
+msgid ""
+"Are you sure you want to install on device %s?\n\n The following partitions will be removed: %s\n\n The following LVMs will be removed: %s\n\n"
+msgstr ""
+"确定要在设备 %s 上安装？\n\n将移除下列分区：%s\n\n将移除下列 LVM：%s\n\n"
+
+#: viewer/__data__.py:17
+msgid "IBM PowerKVM %s"
+msgstr ""
+"IBM PowerKVM %s"
+
+#: viewer/__data__.py:18
+msgid "Ok"
+msgstr ""
+"确定"
+
+#: viewer/__data__.py:19
+msgid "Back"
+msgstr ""
+"上一步"
+
+#: viewer/__data__.py:20
+msgid "Skip"
+msgstr ""
+"跳过"
+
+#: viewer/__data__.py:21
+msgid "Next"
+msgstr ""
+"下一步"
+
+#: viewer/__data__.py:22
+msgid "Edit"
+msgstr ""
+"编辑"
+
+#: viewer/__data__.py:23
+msgid "  <Tab>/<Shift-Tab> between elements   |  <Space> selects"
+msgstr ""
+"  <Tab>/<Shift-Tab> 元素中间移动 | <Space> 选择"
+
+#: viewer/__data__.py:29
+msgid "Password Length"
+msgstr ""
+"密码长度"
+
+#: viewer/__data__.py:30
+msgid "The root password must be at least 6 characters long."
+msgstr ""
+"root 用户密码长度必须至少是 6 个字符。"
+
+#: viewer/__data__.py:31
+msgid "Password Mismatch"
+msgstr ""
+"密码不匹配"
+
+#: viewer/__data__.py:32
+msgid "The passwords you entered were different. Please try again."
+msgstr ""
+"您所输入的密码不同。请重试。"
+
+#: viewer/__data__.py:33
+msgid "Password (confirm):"
+msgstr ""
+"密码（确认）："
+
+#: viewer/__data__.py:34
+msgid "Password:"
+msgstr ""
+"密码："
+
+#: viewer/__data__.py:35
+msgid "Pick a root password. You must type it twice to ensure you know what it is and didn't make a mistake in typing. Remember that the root password is a critical part of system security!"
+msgstr ""
+"选取 root 用户密码。必须输入两次以确保您记住它并确保输入时未出错。请记住，root 用户密码是系统安全性的关键部分！"
+
+#: viewer/__data__.py:41
+msgid "Select the timezone for the system"
+msgstr ""
+"为系统选择时区"
+
+#: viewer/__data__.py:42
+msgid "System clock uses UTC"
+msgstr ""
+"系统时钟使用 UTC"
+
+#: viewer/__data__.py:43
+msgid "Timezone Selection"
+msgstr ""
+"时区选择"
+
+#: viewer/__data__.py:48
+msgid "Select the device to be configured:"
+msgstr ""
+"选择要配置的设备："
+
+#: viewer/__data__.py:49
+msgid "Configure network"
+msgstr ""
+"配置网络"
+
+#: viewer/__data__.py:50
+msgid "UP"
+msgstr ""
+"上移"
+
+#: viewer/__data__.py:51
+msgid "DOWN"
+msgstr ""
+"下移"
+
+#: viewer/__data__.py:56
+msgid "Hostname"
+msgstr ""
+"主机名"
+
+#: viewer/__data__.py:57
+msgid "Primary DNS"
+msgstr ""
+"主 DNS"
+
+#: viewer/__data__.py:58
+msgid "Secondary DNS"
+msgstr ""
+"辅助 DNS"
+
+#: viewer/__data__.py:59
+msgid "Search"
+msgstr ""
+"搜索"
+
+#: viewer/__data__.py:60
+msgid "DNS Configuration"
+msgstr ""
+"DNS 配置"
+
+#: viewer/__data__.py:65
+msgid "NTP Configuration"
+msgstr ""
+"NTP 配置"
+
+#: viewer/__data__.py:66
+msgid "NTP server 1: "
+msgstr ""
+"NTP 服务器 1："
+
+#: viewer/__data__.py:67
+msgid "NTP server 2: "
+msgstr ""
+"NTP 服务器 2："
+
+#: viewer/__data__.py:68
+msgid "NTP server 3: "
+msgstr ""
+"NTP 服务器 3："
+
+#: viewer/__data__.py:69
+msgid "NTP server 4: "
+msgstr ""
+"NTP 服务器 4："
+
+#: viewer/__data__.py:70
+msgid "Enable"
+msgstr ""
+"启用"
+
+#: viewer/__data__.py:75
+msgid "Date and time configuration"
+msgstr ""
+"日期和时间配置"
+
+#: viewer/__data__.py:76
+msgid "Date (YYYY / MM / DD):"
+msgstr ""
+"日期 (YYYY / MM / DD)："
+
+#: viewer/__data__.py:77
+msgid "Time (HH:MM:SS):"
+msgstr ""
+"时间 (HH:MM:SS)："
+
+#: viewer/__data__.py:78
+msgid "Date time error"
+msgstr ""
+"日期时间错误"
+
+#: viewer/__data__.py:79
+msgid ""
+"Date or time format is not correct!\nThe input: %s\nCorrect format: YYYY/MM/DD HH:MM:SS"
+msgstr ""
+"日期时间格式不正确！\n输入：%s\n正确格式：YYYY/MM/DD HH:MM:SS"
+
+#: viewer/__data__.py:85
+msgid "Invalid Entry"
+msgstr ""
+"无效输入"
+
+#: viewer/__data__.py:86
+msgid "Either DHCP must be selected, or IP must be provided."
+msgstr ""
+"必须选择 DHCP，或提供 IP。"
+
+#: viewer/__data__.py:87
+msgid "Device"
+msgstr ""
+"设备"
+
+#: viewer/__data__.py:88
+msgid "MAC Address"
+msgstr ""
+"MAC 地址"
+
+#: viewer/__data__.py:89
+msgid "Use DHCP"
+msgstr ""
+"使用 DHCP"
+
+#: viewer/__data__.py:90
+msgid "Static IP"
+msgstr ""
+"静态 IP"
+
+#: viewer/__data__.py:91
+msgid "Netmask"
+msgstr ""
+"网络掩码"
+
+#: viewer/__data__.py:92
+msgid "Default gateway IP"
+msgstr ""
+"缺省网关 IP"
+
+#: viewer/__data__.py:93
+msgid "Network Device Configuration"
+msgstr ""
+"网络设备配置"
+
+#: viewer/__data__.py:94
+msgid "Create Network bridge device (br%s)"
+msgstr ""
+"创建网桥设备 (br%s)"
+
+#: viewer/__data__.py:98
+msgid "Error while trying to remove the Volume Group in %s"
+msgstr ""
+"尝试移除 %s 中的卷时出错"
+
+#: viewer/__data__.py:99
+msgid "The disk %s is part of the LVM Volume Group(s) ['VolGroup'] which will be destroyed if you continue. Are you sure you want to use that disk?"
+msgstr ""
+"磁盘 %s 是 LVM 卷组 [“VolGroup”] 的一部分，如果继续，那么该卷组将被损坏。确定要使用该磁盘吗？"
+
+#: viewer/__data__.py:100
+msgid "Yes"
+msgstr ""
+"是"
+
+#: viewer/__data__.py:101
+msgid "No"
+msgstr ""
+"否"
+
+#: viewer/__data__.py:102
+msgid "Installation Error"
+msgstr ""
+"安装错误"
+
+#: viewer/__data__.py:107
+msgid "Select the device to install IBM PowerKVM. All data in the selected disk will be lost."
+msgstr ""
+"选择用于安装 IBM PowerKVM 的设备。所选磁盘中的所有数据都将丢失。"
+
+#: viewer/__data__.py:108
+msgid "Disk information"
+msgstr ""
+"磁盘信息"
+
+#: viewer/__data__.py:109
+msgid "  <Tab>/<Shift-Tab> between elements  |  <F3> for details"
+msgstr ""
+"  <Tab>/<Shift-Tab> 元素中间移动 |  <F3> 获取详细信息"
+
+#: viewer/__data__.py:110
+msgid "Disk size"
+msgstr ""
+"磁盘大小"
+
+#: viewer/__data__.py:111
+msgid "The disk size must be greater than 70G!"
+msgstr ""
+"磁盘大小必须大于 70G！"
+
+#: viewer/__data__.py:112
+msgid "No disk found"
+msgstr ""
+"找不到磁盘"
+
+#: viewer/__data__.py:113
+msgid "No disks were found in the system."
+msgstr ""
+"系统中找不到磁盘。"
+
+#: viewer/__data__.py:114
+msgid "ID:"
+msgstr ""
+"标识："
+
+#: viewer/__data__.py:115
+msgid "Size"
+msgstr ""
+"大小"
+
+#: viewer/__data__.py:116
+msgid "Multipath:"
+msgstr ""
+"多路径："
+
+#: viewer/__data__.py:117
+msgid "Name"
+msgstr ""
+"名称"
+
+#: viewer/__data__.py:118
+msgid "Filesystem"
+msgstr ""
+"文件系统"
+
+#: viewer/__data__.py:119
+msgid "VG/Raid"
+msgstr ""
+"VG/Raid"
+
+#: viewer/__data__.py:125
+msgid "Choose the language"
+msgstr ""
+"选择语言"
+
+#: viewer/__data__.py:130
+msgid "The current installed system will be erased, including all general system-wide and virtualization configuration files.Only the contents within /var/lib/libvirt/images and /var/log will be preserved. WARNING: this means the configuration of your Virtual Machines WILL BE ERASED, leaving only the disk images behind. You are advised to back up your VM configurations before proceeding. Are you sure you would like to proceed?"
+msgstr ""
+"将会删除当前所安装的系统，以及所有通用系统范围的虚拟配置文件。仅仅保留 /var/lib/libvirt/images 和 /var/log 中的内容。警告：这意味着虚拟机的配置也会被删除，仅仅剩下磁盘映像。 在继续之前建议您先备份 VM 配置，确定想要继续操作吗？ "
+
+#: viewer/__data__.py:136
+msgid ""
+"A previous installation of PowerKVM has been detected at:\n"
+"\n"
+"%s\n"
+"\n"
+msgstr ""
+"在下列位置检测到 PowerKVM 的先前安装版本：\n"
+"\n"
+"%s\n"
+"\n"
+
+#: viewer/__data__.py:141
+msgid "Hardware is not entitled to proceed. Aborting!"
+msgstr ""
+"硬件没有资格继续。正在异常中止！"
+
+#: viewer/__data__.py:142
+msgid "Invalid entitlement! "
+msgstr ""
+"权利无效！"
+
+#: viewer/__data__.py:147
+msgid "Preparing to install IBM PowerKVM System"
+msgstr ""
+"正在准备安装 IBM PowerKVM 系统"
+
+#: viewer/__data__.py:148
+msgid "Unknown error"
+msgstr ""
+"未知错误"
+
+#: viewer/__data__.py:149
+msgid "Sorry something went wrong the proper error message is on the log file"
+msgstr ""
+"抱歉，出错，发生的相应错误消息位于日志文件中"
+
+#: viewer/__data__.py:155
+msgid "Please, reboot your system now."
+msgstr ""
+"请立即重新引导系统。"
+
+#: viewer/__data__.py:156
+msgid "Reboot"
+msgstr ""
+"重新引导"
+
+#: viewer/__data__.py:157
+msgid "Installation completed! "
+msgstr ""
+"安装完成！"
+
+#: viewer/__data__.py:162
+msgid "The reinstall process can't continue. No previous system was found. Aborting!"
+msgstr ""
+"重新安装过程无法继续。找不到上一个系统。正在异常中止！"
+
+#: viewer/__data__.py:168
+msgid "Preparing to upgrade system"
+msgstr ""
+"正在准备升级系统"
+
+#: viewer/__data__.py:169
+msgid "Working..."
+msgstr ""
+"正在工作..."
+
+#: viewer/__data__.py:174
+msgid "Installation exited with error code: %s"
+msgstr ""
+"安装结束，存在错误代码：%s"
+
+#: viewer/__data__.py:175
+msgid "Log is available on %s"
+msgstr ""
+"日志位于 %s"
+
+#: viewer/__data__.py:176
+msgid "Unexpected error."
+msgstr ""
+"意外错误。"
+
+#: viewer/__data__.py:177
+msgid "Unknown error."
+msgstr ""
+"未知错误。"
+
+#: viewer/__data__.py:178
+msgid "Invalid disk size."
+msgstr ""
+"无效磁盘大小。"
+
+#: viewer/__data__.py:179
+msgid "No disk found in the system."
+msgstr ""
+"系统中找不到磁盘。"
+
+#: viewer/__data__.py:180
+msgid "Hardware is not entitled, aborting installation."
+msgstr ""
+"硬件没有资格继续。正在异常中止。"
+
+#: viewer/__data__.py:181
+msgid "Error while installing IBM PowerKVM."
+msgstr ""
+"安装 IBM PowerKVM 时出错。"
+
+#: viewer/__data__.py:182
+msgid "Error while performing disk operations."
+msgstr ""
+"执行磁盘操作时出错。"
+
+#: viewer/__data__.py:183
+msgid "Invalid error code."
+msgstr ""
+"无效错误代码。"
+
+#: viewer/__data__.py:184
+msgid "Could not remove LVM entities."
+msgstr ""
+"无法移除 LVM 条目。"
+
+#: viewer/__data__.py:185
+msgid "Could not deactivate volume groups."
+msgstr ""
+"无法取消激活卷组。"
+
+#: viewer/__data__.py:186
+msgid "Could not activate volume groups."
+msgstr ""
+"无法激活卷组。"
+
+#: viewer/__data__.py:187
+msgid "Could not stop software RAID."
+msgstr ""
+"无法停止软件 RAID。"
+
+#: viewer/__data__.py:188
+msgid "Disk information not available."
+msgstr ""
+"磁盘信息不可用。"
+
+#: viewer/__data__.py:189
+msgid "Problem while removing pratitioning scheme."
+msgstr ""
+"移除分区模式时出现问题。"
+
+#: viewer/__data__.py:190
+msgid "Problem while partitioning the disk."
+msgstr ""
+"分割磁盘时出现问题。"
+
+#: viewer/__data__.py:191
+msgid "Problem while creating LVM."
+msgstr ""
+"创建 LVM 时出现问题。"
+
+#: viewer/__data__.py:192
+msgid "Failed to download (HTTP) install automation file."
+msgstr ""
+"未能下载 (HTTP) 安装自动化文件。"
+
+#: viewer/__data__.py:193
+msgid "Failed to download (TFTP) install automation file."
+msgstr ""
+"未能下载 (TFTP) 安装自动化文件。"
+
+#: viewer/__data__.py:194
+msgid "Problem downloading (NFS) install automation file."
+msgstr ""
+"下载 (NFS) 安装自动化文件时出现问题。"
+
+#: viewer/__data__.py:195
+msgid "Could not parse install automation file."
+msgstr ""
+"无法解析安装自动化文件。"
+
+#: viewer/__data__.py:196
+msgid "Failed to get IPR RAID label."
+msgstr ""
+"未能获取 IPR RAID 标签。"
+
+#: viewer/__data__.py:197
+msgid "Failed while executing pre-install modules."
+msgstr ""
+"执行预安装模块失败。"
+
+#: viewer/__data__.py:198
+msgid "Failed to create disklabel on IPR RAID."
+msgstr ""
+"未能创建 IPR RAID 的磁盘标签。"
+
+#: viewer/__data__.py:199
+msgid "Failed to execute install automation pre-script."
+msgstr ""
+"未能执行安装自动化前脚本。"
+
+#: viewer/__data__.py:200
+msgid "Failed to execute PowerKVM pre-script."
+msgstr ""
+"未能执行 PowerKVM 前脚本。"
+
+#: viewer/__data__.py:201
+msgid "Failed while executing post-install modules."
+msgstr ""
+"执行后安装模块失败。"
+
+#: viewer/__data__.py:202
+msgid "Failed to set password."
+msgstr ""
+"未能设置密码。"
+
+#: viewer/__data__.py:203
+msgid "Failed to execute install automation post-script."
+msgstr ""
+"未能执行安装自动化后脚本。"
+
+#: viewer/__data__.py:204
+msgid "Failed to set NTP service."
+msgstr ""
+"未能设置 NTP 设备。"
+
+#: viewer/__data__.py:205
+msgid "Invalid network interface."
+msgstr ""
+"无效网络接口。"
+
+#: viewer/__data__.py:206
+msgid "Failed to write UTC time configuration."
+msgstr ""
+"未能写 UTC 时间配置。"
+
+#: viewer/__data__.py:207
+msgid "Missing target network interface in install automation file."
+msgstr ""
+"安装自动化文件中缺少目标网络接口。"
+
+#: viewer/__data__.py:208
+msgid "Missing target disk parameter in install automation file."
+msgstr ""
+"安装自动化文件中缺少目标磁盘参数。"
+
+#: viewer/__data__.py:209
+msgid "Error while installing packages."
+msgstr ""
+"安装软件包时出错。"
+
+#: viewer/__data__.py:210
+msgid "No repository provided to the installer."
+msgstr ""
+"没有为安装程序提供存储库。"
+
+#: viewer/__data__.py:211
+msgid "Invalid repository path."
+msgstr ""
+"无效存储库路径。"
+
+#: viewer/__data__.py:212
+msgid "Invalid repository content."
+msgstr ""
+"无效存储库内容。"
+
+#: viewer/__data__.py:213
+msgid "Failed to load Timezones list."
+msgstr ""
+"未能装入“时区”列表。"
+
+#: viewer/__data__.py:214
+msgid "Firmware version must be greater than %s"
+msgstr ""
+"固件版本必须高于 %s"
+
+#: viewer/__data__.py:215
+msgid "Invalid machine type."
+msgstr ""
+"无效机器类型。"
+
+#: viewer/__data__.py:216
+msgid "Invalid hypervisor."
+msgstr ""
+"无效管理程序。"
+
+#: viewer/__data__.py:217
+msgid "No previous system found."
+msgstr ""
+"找不到先前系统。"
+
+#: viewer/__data__.py:218
+msgid "Unexpected error while partitioning the disk."
+msgstr ""
+"分割磁盘时发生意外错误。"
+
+#: viewer/__data__.py:219
+msgid "Unexpected error while installing packages."
+msgstr ""
+"安装软件包时发生意外错误。"
+
+#: viewer/__data__.py:220
+msgid "Unexpected error while executing post-install modules."
+msgstr ""
+"执行后安装模块时发生意外错误。"
+
+#: viewer/__data__.py:221
+msgid "Unexpected error while executing kickstart."
+msgstr ""
+"执行无人看守安装时发生意外错误。"
+
+#: viewer/__data__.py:222
+msgid "Unexpected error while verifying disks."
+msgstr ""
+"验证磁盘时发生意外错误。"
+
+#: viewer/__data__.py:223
+msgid "Unexpected error while selecting disks."
+msgstr ""
+"选择磁盘时发生意外错误。"
+
+#: viewer/__data__.py:224
+msgid "Unexpected error while configuring system."
+msgstr ""
+"配置系统时发生意外错误。"
+
+#: viewer/__data__.py:228
+msgid "Installation Summary"
+msgstr ""
+"安装摘要"
+
+#: viewer/__data__.py:229
+msgid "Timezone: "
+msgstr ""
+"时区："
+
+#: viewer/__data__.py:230
+msgid "Date/Time: "
+msgstr ""
+"日期/时间："
+
+#: viewer/__data__.py:231
+msgid "NTP servers"
+msgstr ""
+"NTP 服务器"
+
+#: viewer/__data__.py:232
+msgid "NTP disabled"
+msgstr ""
+"禁用 NTP"
+
+#: viewer/__data__.py:233
+msgid "IP Address: "
+msgstr ""
+"IP 地址："
+
+#: viewer/__data__.py:234
+msgid "Gateway: "
+msgstr ""
+"网关："
+
+#: viewer/__data__.py:235
+msgid "Netmask: "
+msgstr ""
+"子网掩码："
+
+#: viewer/__data__.py:236
+msgid "Hostname: "
+msgstr ""
+"主机名："
+
+#: viewer/__data__.py:237
+msgid "Bridge: "
+msgstr ""
+"网桥："
+
+#: viewer/__data__.py:238
+msgid "DHCP is enabled"
+msgstr ""
+"启用 DHCP"
+
+#: viewer/__data__.py:239
+msgid "Network"
+msgstr ""
+"网络"
+
+#: viewer/__data__.py:240
+msgid "Device: "
+msgstr ""
+"设备："
+
+#: viewer/__data__.py:241
+msgid "Password is set"
+msgstr ""
+"已设置密码"
+
+#: viewer/__data__.py:242
+msgid "System clock uses UTC: "
+msgstr ""
+"系统时钟使用 UTC："
+
+#: viewer/__data__.py:245
+msgid "I Accept both IBM and non-IBM terms"
+msgstr ""
+"我接受 IBM 和非 IBM 条款"
+
+#: viewer/__data__.py:246
+msgid "I do not accept the terms in the license agreement"
+msgstr ""
+"我不接受许可协议中的条款"
+
+
+# ENGL1SH_VERS10N 49670_14 DO NOT REMOVE OR CHANGE THIS LINE
+# T9N_SRC_ID 228
+# T9N_SH1P_STR1NG KVM21AAP001 6

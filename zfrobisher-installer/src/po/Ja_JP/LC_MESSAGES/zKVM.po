@@ -1,0 +1,900 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-08 13:49+BRT\n"
+"PO-Revision-Date: 2014-05-08 13:50-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: UTF-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: controller/__data__.py:7
+msgid "ERROR: Cannot detect installed system, impossible to upgrade"
+msgstr ""
+"エラー: インストール済みシステムを検出できないため、アップグレードできません"
+
+#: controller/__data__.py:8
+msgid "ERROR: Cannot detect installed system version, impossible to upgrade"
+msgstr ""
+"エラー: インストール済みシステムのバージョンを検出できないため、アップグレードできません"
+
+#: controller/__data__.py:9
+msgid "ERROR: Cannot fast forward upgrades, impossible to upgrade"
+msgstr ""
+"エラー: 以前のアップグレードを省略できないため、アップグレードできません"
+
+#: controller/__data__.py:10
+msgid "ERROR: Installed system is newer, impossible to upgrade"
+msgstr ""
+"エラー: インストール済みシステムの方が新しいため、アップグレードできません"
+
+#: controller/__data__.py:11
+msgid "ERROR: Upgrade failed."
+msgstr ""
+"エラー: アップグレードに失敗しました。"
+
+#: controller/__data__.py:12
+msgid "Error while installing IBM PowerKVM into disk %s"
+msgstr ""
+"IBM PowerKVM をディスク %s にインストールしているときに、エラーがありました"
+
+#: controller/__data__.py:13
+msgid "Formatting disks..."
+msgstr ""
+"ディスクのフォーマット中..."
+
+#: controller/__data__.py:14
+msgid "Formatting root device to reinstall system"
+msgstr ""
+"システムを再インストールするルート・デバイスのフォーマット中"
+
+#: controller/__data__.py:15
+msgid "Installing IBM PowerKVM into disk %s..."
+msgstr ""
+"IBM PowerKVM をディスク %s にインストール中..."
+
+#: controller/__data__.py:16
+msgid "Install IBM PowerKVM"
+msgstr ""
+"IBM PowerKVM のインストール"
+
+#: controller/__data__.py:17
+msgid "Proceed to upgrade the system?"
+msgstr ""
+"システムのアップグレードを続行しますか?"
+
+#: controller/__data__.py:18
+msgid "Reinstall IBM PowerKVM"
+msgstr ""
+"IBM PowerKVM の再インストール"
+
+#: controller/__data__.py:19
+msgid "Rescue mode (goes to terminal)"
+msgstr ""
+"レスキュー・モード (端末に入る)"
+
+#: controller/__data__.py:20
+msgid "Running Post Upgrade Scripts"
+msgstr ""
+"ポストアップグレード・スクリプトの実行中"
+
+#: controller/__data__.py:21
+msgid "System Installed. Starting post install scripts."
+msgstr ""
+"システムがインストールされました。ポストインストール・スクリプトを起動します。"
+
+#: controller/__data__.py:22
+msgid "Upgrade concluded!"
+msgstr ""
+"アップグレードが完了しました"
+
+#: controller/__data__.py:23
+msgid "Upgrade installed IBM PowerKVM"
+msgstr ""
+"インストール済み IBM PowerKVM のアップグレード"
+
+#: controller/__data__.py:24
+msgid "Getting disk information..."
+msgstr ""
+"ディスク情報の取得中..."
+
+#: ui/__data__.py:6 viewer/__data__.py:36
+msgid "Root Password"
+msgstr ""
+"root パスワード"
+
+#: ui/__data__.py:7
+msgid "Timezone selection"
+msgstr ""
+"タイムゾーン選択"
+
+#: ui/__data__.py:8
+msgid "Date and Time"
+msgstr ""
+"日付および時刻"
+
+#: ui/__data__.py:9
+msgid "Configure Network"
+msgstr ""
+"ネットワークの構成"
+
+#: ui/__data__.py:10
+msgid "DNS configuration"
+msgstr ""
+"DNS 構成"
+
+#: ui/__data__.py:11
+msgid "Exit"
+msgstr ""
+"終了"
+
+#: viewer/__data__.py:12
+msgid "Welcome to IBM PowerKVM %s"
+msgstr ""
+"IBM PowerKVM %s へようこそ"
+
+#: viewer/__data__.py:13
+msgid "Select one of the options below and follow the instructions."
+msgstr ""
+"次のいずれかのオプションを選択し、指示に従ってください。"
+
+#: viewer/__data__.py:14
+msgid ""
+"Are you sure you want to install on device %s?\n\n The following partitions will be removed: %s\n\n The following LVMs will be removed: %s\n\n"
+msgstr ""
+"デバイス %s へのインストールを実行しますか? \n\n 次のパーティションが削除されます: %s\n\n 次の LVM が削除されます: %s\n\n"
+
+#: viewer/__data__.py:17
+msgid "IBM PowerKVM %s"
+msgstr ""
+"IBM PowerKVM %s"
+
+#: viewer/__data__.py:18
+msgid "Ok"
+msgstr ""
+"OK"
+
+#: viewer/__data__.py:19
+msgid "Back"
+msgstr ""
+"戻る"
+
+#: viewer/__data__.py:20
+msgid "Skip"
+msgstr ""
+"スキップ"
+
+#: viewer/__data__.py:21
+msgid "Next"
+msgstr ""
+"次へ"
+
+#: viewer/__data__.py:22
+msgid "Edit"
+msgstr ""
+"編集"
+
+#: viewer/__data__.py:23
+msgid "  <Tab>/<Shift-Tab> between elements   |  <Space> selects"
+msgstr ""
+"  <Tab>/<Shift-Tab> エレメント間   |  <Space> 選択"
+
+#: viewer/__data__.py:29
+msgid "Password Length"
+msgstr ""
+"パスワードの長さ"
+
+#: viewer/__data__.py:30
+msgid "The root password must be at least 6 characters long."
+msgstr ""
+"root パスワードの長さは、少なくとも 6 文字でなければなりません。"
+
+#: viewer/__data__.py:31
+msgid "Password Mismatch"
+msgstr ""
+"パスワードが一致しません"
+
+#: viewer/__data__.py:32
+msgid "The passwords you entered were different. Please try again."
+msgstr ""
+"入力したパスワードが異なっています。やり直してください。"
+
+#: viewer/__data__.py:33
+msgid "Password (confirm):"
+msgstr ""
+"パスワード (確認):"
+
+#: viewer/__data__.py:34
+msgid "Password:"
+msgstr ""
+"パスワード:"
+
+#: viewer/__data__.py:35
+msgid "Pick a root password. You must type it twice to ensure you know what it is and didn't make a mistake in typing. Remember that the root password is a critical part of system security!"
+msgstr ""
+"root パスワードを決定します。パスワードの取り違えや入力ミスがないことを確認するため、2 回入力する必要があります。root パスワードはシステム・セキュリティーにおいて重要な要素であることに注意してください。"
+
+#: viewer/__data__.py:41
+msgid "Select the timezone for the system"
+msgstr ""
+"システムのタイムゾーンを選択"
+
+#: viewer/__data__.py:42
+msgid "System clock uses UTC"
+msgstr ""
+"システム・クロックは UTC を使用"
+
+#: viewer/__data__.py:43
+msgid "Timezone Selection"
+msgstr ""
+"タイムゾーン選択"
+
+#: viewer/__data__.py:48
+msgid "Select the device to be configured:"
+msgstr ""
+"構成するデバイスを選択:"
+
+#: viewer/__data__.py:49
+msgid "Configure network"
+msgstr ""
+"ネットワークの構成"
+
+#: viewer/__data__.py:50
+msgid "UP"
+msgstr ""
+"上へ"
+
+#: viewer/__data__.py:51
+msgid "DOWN"
+msgstr ""
+"下へ"
+
+#: viewer/__data__.py:56
+msgid "Hostname"
+msgstr ""
+"ホスト名"
+
+#: viewer/__data__.py:57
+msgid "Primary DNS"
+msgstr ""
+"プライマリー DNS"
+
+#: viewer/__data__.py:58
+msgid "Secondary DNS"
+msgstr ""
+"セカンダリー DNS"
+
+#: viewer/__data__.py:59
+msgid "Search"
+msgstr ""
+"検索"
+
+#: viewer/__data__.py:60
+msgid "DNS Configuration"
+msgstr ""
+"DNS 構成"
+
+#: viewer/__data__.py:65
+msgid "NTP Configuration"
+msgstr ""
+"NTP 構成"
+
+#: viewer/__data__.py:66
+msgid "NTP server 1: "
+msgstr ""
+"NTP サーバー 1: "
+
+#: viewer/__data__.py:67
+msgid "NTP server 2: "
+msgstr ""
+"NTP サーバー 2: "
+
+#: viewer/__data__.py:68
+msgid "NTP server 3: "
+msgstr ""
+"NTP サーバー 3: "
+
+#: viewer/__data__.py:69
+msgid "NTP server 4: "
+msgstr ""
+"NTP サーバー 4: "
+
+#: viewer/__data__.py:70
+msgid "Enable"
+msgstr ""
+"使用可能"
+
+#: viewer/__data__.py:75
+msgid "Date and time configuration"
+msgstr ""
+"日時構成"
+
+#: viewer/__data__.py:76
+msgid "Date (YYYY / MM / DD):"
+msgstr ""
+"日付 (YYYY / MM / DD):"
+
+#: viewer/__data__.py:77
+msgid "Time (HH:MM:SS):"
+msgstr ""
+"時刻 (HH:MM:SS):"
+
+#: viewer/__data__.py:78
+msgid "Date time error"
+msgstr ""
+"日時エラー"
+
+#: viewer/__data__.py:79
+msgid ""
+"Date or time format is not correct!\nThe input: %s\nCorrect format: YYYY/MM/DD HH:MM:SS"
+msgstr ""
+"日または時刻の形式が正しくありません。\n入力: %s\n正しい形式: YYYY/MM/DD HH:MM:SS"
+
+#: viewer/__data__.py:85
+msgid "Invalid Entry"
+msgstr ""
+"入力が無効です"
+
+#: viewer/__data__.py:86
+msgid "Either DHCP must be selected, or IP must be provided."
+msgstr ""
+"DHCP を選択するか、または IP を入力する必要があります。"
+
+#: viewer/__data__.py:87
+msgid "Device"
+msgstr ""
+"デバイス"
+
+#: viewer/__data__.py:88
+msgid "MAC Address"
+msgstr ""
+"MAC アドレス"
+
+#: viewer/__data__.py:89
+msgid "Use DHCP"
+msgstr ""
+"DHCP の使用"
+
+#: viewer/__data__.py:90
+msgid "Static IP"
+msgstr ""
+"静的 IP"
+
+#: viewer/__data__.py:91
+msgid "Netmask"
+msgstr ""
+"ネットマスク"
+
+#: viewer/__data__.py:92
+msgid "Default gateway IP"
+msgstr ""
+"デフォルト・ゲートウェイ IP"
+
+#: viewer/__data__.py:93
+msgid "Network Device Configuration"
+msgstr ""
+"ネットワーク・デバイス構成"
+
+#: viewer/__data__.py:94
+msgid "Create Network bridge device (br%s)"
+msgstr ""
+"ネットワーク・ブリッジ・デバイス (br%s) の作成"
+
+#: viewer/__data__.py:98
+msgid "Error while trying to remove the Volume Group in %s"
+msgstr ""
+"ボリューム・グループを %s から削除しようと試みているときに、エラーが発生しました"
+
+#: viewer/__data__.py:99
+msgid "The disk %s is part of the LVM Volume Group(s) ['VolGroup'] which will be destroyed if you continue. Are you sure you want to use that disk?"
+msgstr ""
+"ディスク %s は LVM ボリューム・グループ ['VolGroup'] の一部であるため、続行するとボリューム・グループは破棄されます。このディスクを使用しますか?"
+
+#: viewer/__data__.py:100
+msgid "Yes"
+msgstr ""
+"はい"
+
+#: viewer/__data__.py:101
+msgid "No"
+msgstr ""
+"いいえ"
+
+#: viewer/__data__.py:102
+msgid "Installation Error"
+msgstr ""
+"インストール・エラー"
+
+#: viewer/__data__.py:107
+msgid "Select the device to install IBM PowerKVM. All data in the selected disk will be lost."
+msgstr ""
+"IBM PowerKVM をインストールするデバイスを選択します。選択したディスクのデータはすべて失われます。"
+
+#: viewer/__data__.py:108
+msgid "Disk information"
+msgstr ""
+"ディスク情報"
+
+#: viewer/__data__.py:109
+msgid "  <Tab>/<Shift-Tab> between elements  |  <F3> for details"
+msgstr ""
+"  <Tab>/<Shift-Tab> エレメント間  |  <F3> 詳細"
+
+#: viewer/__data__.py:110
+msgid "Disk size"
+msgstr ""
+"ディスク・サイズ"
+
+#: viewer/__data__.py:111
+msgid "The disk size must be greater than 70G!"
+msgstr ""
+"ディスク・サイズは、70G より大きくなければなりません!"
+
+#: viewer/__data__.py:112
+msgid "No disk found"
+msgstr ""
+"ディスクが見つかりません"
+
+#: viewer/__data__.py:113
+msgid "No disks were found in the system."
+msgstr ""
+"ディスクがシステムに見つかりません。"
+
+#: viewer/__data__.py:114
+msgid "ID:"
+msgstr ""
+"ID:"
+
+#: viewer/__data__.py:115
+msgid "Size"
+msgstr ""
+"サイズ"
+
+#: viewer/__data__.py:116
+msgid "Multipath:"
+msgstr ""
+"マルチパス:"
+
+#: viewer/__data__.py:117
+msgid "Name"
+msgstr ""
+"名前"
+
+#: viewer/__data__.py:118
+msgid "Filesystem"
+msgstr ""
+"ファイルシステム"
+
+#: viewer/__data__.py:119
+msgid "VG/Raid"
+msgstr ""
+"VG/Raid"
+
+#: viewer/__data__.py:125
+msgid "Choose the language"
+msgstr ""
+"言語の選択"
+
+#: viewer/__data__.py:130
+msgid "The current installed system will be erased, including all general system-wide and virtualization configuration files.Only the contents within /var/lib/libvirt/images and /var/log will be preserved. WARNING: this means the configuration of your Virtual Machines WILL BE ERASED, leaving only the disk images behind. You are advised to back up your VM configurations before proceeding. Are you sure you would like to proceed?"
+msgstr ""
+"現在インストールされているシステムは、すべての一般的なシステム全体の構成ファイル、および仮想化構成ファイルを含め、消去されます。/var/lib/libvirt/images および /var/log の内容のみが保持されます。警告: これは、ディスク・イメージを除き、ご使用の仮想マシンの構成が消去されることを意味します。続行する前に、VM 構成のバックアップを行うことをお勧めします。続行しますか?"
+
+#: viewer/__data__.py:136
+msgid ""
+"A previous installation of PowerKVM has been detected at:\n"
+"\n"
+"%s\n"
+"\n"
+msgstr ""
+"PowerKVM の以前のインストールが以下に検出されました:\n"
+"\n"
+"%s\n"
+"\n"
+
+#: viewer/__data__.py:141
+msgid "Hardware is not entitled to proceed. Aborting!"
+msgstr ""
+"ハードウェアには、続行するための資格が付与されていません。中止します。"
+
+#: viewer/__data__.py:142
+msgid "Invalid entitlement! "
+msgstr ""
+"資格が無効です。"
+
+#: viewer/__data__.py:147
+msgid "Preparing to install IBM PowerKVM System"
+msgstr ""
+"IBM PowerKVM システムのインストールを準備しています"
+
+#: viewer/__data__.py:148
+msgid "Unknown error"
+msgstr ""
+"不明なエラー"
+
+#: viewer/__data__.py:149
+msgid "Sorry something went wrong the proper error message is on the log file"
+msgstr ""
+"何らかの誤りがあったため、該当するエラー・メッセージがログ・ファイルに書き込まれました"
+
+#: viewer/__data__.py:155
+msgid "Please, reboot your system now."
+msgstr ""
+"すぐにシステムをリブートしてください。"
+
+#: viewer/__data__.py:156
+msgid "Reboot"
+msgstr ""
+"リブート"
+
+#: viewer/__data__.py:157
+msgid "Installation completed! "
+msgstr ""
+"インストールが完了しました!"
+
+#: viewer/__data__.py:162
+msgid "The reinstall process can't continue. No previous system was found. Aborting!"
+msgstr ""
+"再インストール・プロセスを続行できません。以前のシステムが見つかりませんでした。中止します。"
+
+#: viewer/__data__.py:168
+msgid "Preparing to upgrade system"
+msgstr ""
+"システムのアップグレードを準備しています"
+
+#: viewer/__data__.py:169
+msgid "Working..."
+msgstr ""
+"作動中..."
+
+#: viewer/__data__.py:174
+msgid "Installation exited with error code: %s"
+msgstr ""
+"インストールが次のエラー・コードで終了しました: %s"
+
+#: viewer/__data__.py:175
+msgid "Log is available on %s"
+msgstr ""
+"ログは %s にあります。"
+
+#: viewer/__data__.py:176
+msgid "Unexpected error."
+msgstr ""
+"予期しないエラーが発生しました。"
+
+#: viewer/__data__.py:177
+msgid "Unknown error."
+msgstr ""
+"不明なエラーが発生しました。"
+
+#: viewer/__data__.py:178
+msgid "Invalid disk size."
+msgstr ""
+"ディスク・サイズが無効です。"
+
+#: viewer/__data__.py:179
+msgid "No disk found in the system."
+msgstr ""
+"ディスクがシステムに見つかりません。"
+
+#: viewer/__data__.py:180
+msgid "Hardware is not entitled, aborting installation."
+msgstr ""
+"ハードウェアには資格が付与されていません。インストールを中止します。"
+
+#: viewer/__data__.py:181
+msgid "Error while installing IBM PowerKVM."
+msgstr ""
+"IBM PowerKVM のインストール中にエラーが発生しました。"
+
+#: viewer/__data__.py:182
+msgid "Error while performing disk operations."
+msgstr ""
+"ディスク操作の実行中にエラーが発生しました。"
+
+#: viewer/__data__.py:183
+msgid "Invalid error code."
+msgstr ""
+"エラー・コードが無効です。"
+
+#: viewer/__data__.py:184
+msgid "Could not remove LVM entities."
+msgstr ""
+"LVM エンティティを削除できませんでした。"
+
+#: viewer/__data__.py:185
+msgid "Could not deactivate volume groups."
+msgstr ""
+"ボリューム・グループの活動を停止できませんでした。"
+
+#: viewer/__data__.py:186
+msgid "Could not activate volume groups."
+msgstr ""
+"ボリューム・グループの活動を開始できませんでした。"
+
+#: viewer/__data__.py:187
+msgid "Could not stop software RAID."
+msgstr ""
+"ソフトウェア RAID を停止できませんでした。"
+
+#: viewer/__data__.py:188
+msgid "Disk information not available."
+msgstr ""
+"ディスク情報はありません。"
+
+#: viewer/__data__.py:189
+msgid "Problem while removing pratitioning scheme."
+msgstr ""
+"パーティショニング方式の削除中に問題が発生しました。"
+
+#: viewer/__data__.py:190
+msgid "Problem while partitioning the disk."
+msgstr ""
+"ディスクのパーティショニング中に問題が発生しました。"
+
+#: viewer/__data__.py:191
+msgid "Problem while creating LVM."
+msgstr ""
+"LVM の作成中に問題が発生しました。"
+
+#: viewer/__data__.py:192
+msgid "Failed to download (HTTP) install automation file."
+msgstr ""
+"インストール自動化ファイルのダウンロード (HTTP) に失敗しました。"
+
+#: viewer/__data__.py:193
+msgid "Failed to download (TFTP) install automation file."
+msgstr ""
+"インストール自動化ファイルのダウンロード (TFTP) に失敗しました。"
+
+#: viewer/__data__.py:194
+msgid "Problem downloading (NFS) install automation file."
+msgstr ""
+"インストール自動化ファイルのダウンロード (NFS) 中に問題が発生しました。"
+
+#: viewer/__data__.py:195
+msgid "Could not parse install automation file."
+msgstr ""
+"インストール自動化ファイルを解析できませんでした。"
+
+#: viewer/__data__.py:196
+msgid "Failed to get IPR RAID label."
+msgstr ""
+"IPR RAID ラベルの取得に失敗しました。"
+
+#: viewer/__data__.py:197
+msgid "Failed while executing pre-install modules."
+msgstr ""
+"プリインストール・モジュールの実行中に失敗しました。"
+
+#: viewer/__data__.py:198
+msgid "Failed to create disklabel on IPR RAID."
+msgstr ""
+"IPR RAID でディスク・ラベルの作成に失敗しました。"
+
+#: viewer/__data__.py:199
+msgid "Failed to execute install automation pre-script."
+msgstr ""
+"インストール自動化プリスクリプトの実行に失敗しました。"
+
+#: viewer/__data__.py:200
+msgid "Failed to execute PowerKVM pre-script."
+msgstr ""
+"PowerKVM プリスクリプトの実行に失敗しました。"
+
+#: viewer/__data__.py:201
+msgid "Failed while executing post-install modules."
+msgstr ""
+"ポストインストール・モジュールの実行中に失敗しました。"
+
+#: viewer/__data__.py:202
+msgid "Failed to set password."
+msgstr ""
+"パスワード設定に失敗しました。"
+
+#: viewer/__data__.py:203
+msgid "Failed to execute install automation post-script."
+msgstr ""
+"インストール自動化ポストスクリプトの実行に失敗しました。"
+
+#: viewer/__data__.py:204
+msgid "Failed to set NTP service."
+msgstr ""
+"NTP サービスの設定に失敗しました。"
+
+#: viewer/__data__.py:205
+msgid "Invalid network interface."
+msgstr ""
+"ネットワーク・インターフェースが無効です。"
+
+#: viewer/__data__.py:206
+msgid "Failed to write UTC time configuration."
+msgstr ""
+"UTC 時刻構成の書き込みに失敗しました。"
+
+#: viewer/__data__.py:207
+msgid "Missing target network interface in install automation file."
+msgstr ""
+"インストール自動化ファイル内でターゲット・ネットワーク・インターフェースが欠落しています。"
+
+#: viewer/__data__.py:208
+msgid "Missing target disk parameter in install automation file."
+msgstr ""
+"インストール自動化ファイル内にターゲット・ディスク・パラメーターがありません。"
+
+#: viewer/__data__.py:209
+msgid "Error while installing packages."
+msgstr ""
+"パッケージのインストール中にエラーが発生しました。"
+
+#: viewer/__data__.py:210
+msgid "No repository provided to the installer."
+msgstr ""
+"インストーラーにリポジトリーが提供されていません。"
+
+#: viewer/__data__.py:211
+msgid "Invalid repository path."
+msgstr ""
+"リポジトリー・パスが無効です。"
+
+#: viewer/__data__.py:212
+msgid "Invalid repository content."
+msgstr ""
+"リポジトリーの内容が無効です。"
+
+#: viewer/__data__.py:213
+msgid "Failed to load Timezones list."
+msgstr ""
+"タイムゾーン・リストのロードに失敗しました。"
+
+#: viewer/__data__.py:214
+msgid "Firmware version must be greater than %s"
+msgstr ""
+"ファームウェア・バージョンは %s より大きくなければなりません。"
+
+#: viewer/__data__.py:215
+msgid "Invalid machine type."
+msgstr ""
+"マシン・タイプが無効です。"
+
+#: viewer/__data__.py:216
+msgid "Invalid hypervisor."
+msgstr ""
+"ハイパーバイザーが無効です。"
+
+#: viewer/__data__.py:217
+msgid "No previous system found."
+msgstr ""
+"以前のシステムが見つかりません。"
+
+#: viewer/__data__.py:218
+msgid "Unexpected error while partitioning the disk."
+msgstr ""
+"ディスクのパーティショニング中に予期しないエラーが発生しました。"
+
+#: viewer/__data__.py:219
+msgid "Unexpected error while installing packages."
+msgstr ""
+"パッケージのインストール中に予期しないエラーが発生しました。"
+
+#: viewer/__data__.py:220
+msgid "Unexpected error while executing post-install modules."
+msgstr ""
+"ポストインストール・モジュールの実行中に予期しないエラーが発生しました。"
+
+#: viewer/__data__.py:221
+msgid "Unexpected error while executing kickstart."
+msgstr ""
+"キックスタートの実行中に予期しないエラーが発生しました。"
+
+#: viewer/__data__.py:222
+msgid "Unexpected error while verifying disks."
+msgstr ""
+"ディスクの検証中に予期しないエラーが発生しました。"
+
+#: viewer/__data__.py:223
+msgid "Unexpected error while selecting disks."
+msgstr ""
+"ディスクの選択中に予期しないエラーが発生しました。"
+
+#: viewer/__data__.py:224
+msgid "Unexpected error while configuring system."
+msgstr ""
+"システムの構成中に予期しないエラーが発生しました。"
+
+#: viewer/__data__.py:228
+msgid "Installation Summary"
+msgstr ""
+"インストール要約"
+
+#: viewer/__data__.py:229
+msgid "Timezone: "
+msgstr ""
+"タイムゾーン: "
+
+#: viewer/__data__.py:230
+msgid "Date/Time: "
+msgstr ""
+"日/時刻: "
+
+#: viewer/__data__.py:231
+msgid "NTP servers"
+msgstr ""
+"NTP サーバー"
+
+#: viewer/__data__.py:232
+msgid "NTP disabled"
+msgstr ""
+"NTP は使用不可です"
+
+#: viewer/__data__.py:233
+msgid "IP Address: "
+msgstr ""
+"IP アドレス: "
+
+#: viewer/__data__.py:234
+msgid "Gateway: "
+msgstr ""
+"ゲートウェイ: "
+
+#: viewer/__data__.py:235
+msgid "Netmask: "
+msgstr ""
+"ネットマスク: "
+
+#: viewer/__data__.py:236
+msgid "Hostname: "
+msgstr ""
+"ホスト名: "
+
+#: viewer/__data__.py:237
+msgid "Bridge: "
+msgstr ""
+"ブリッジ: "
+
+#: viewer/__data__.py:238
+msgid "DHCP is enabled"
+msgstr ""
+"DHCP は使用可能です"
+
+#: viewer/__data__.py:239
+msgid "Network"
+msgstr ""
+" ネットワーク"
+
+#: viewer/__data__.py:240
+msgid "Device: "
+msgstr ""
+"デバイス: "
+
+#: viewer/__data__.py:241
+msgid "Password is set"
+msgstr ""
+"パスワードは設定済みです"
+
+#: viewer/__data__.py:242
+msgid "System clock uses UTC: "
+msgstr ""
+"システム・クロックに UTC を使用: "
+
+#: viewer/__data__.py:245
+msgid "I Accept both IBM and non-IBM terms"
+msgstr ""
+"IBM および IBM 以外の両方の条項に同意します"
+
+#: viewer/__data__.py:246
+msgid "I do not accept the terms in the license agreement"
+msgstr ""
+"使用条件の条項に同意しません"
+
+
+# ENGL1SH_VERS10N 49670_14 DO NOT REMOVE OR CHANGE THIS LINE
+# T9N_SRC_ID 228
+# T9N_SH1P_STR1NG KVM21AAP001 6

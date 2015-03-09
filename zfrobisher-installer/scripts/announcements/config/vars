@@ -1,0 +1,45 @@
+source $WORKDIR/../../version.info
+
+
+RELEASE_VER="${PKVM_STREAM}.${SERVICE_PACK}.${BUILD_NUMBER}.${RESPIN}"
+RELEASE_FOLDER="0.${BUILD_NUMBER}.${RESPIN}"
+RELEASE_ISO_ID="201409080938"
+
+LTCPHX_URL="http://ltcphx.austin.ibm.com/isos/frobisher/PowerKVM"
+
+#2.1.0 specifics
+GSA_URL="https://pokgsa.ibm.com/projects/p/powerkvm/ISOs"
+LTCPHX_OS_URL="${LTCPHX_URL}/releases/$RELEASE_FOLDER/os/"
+BASE_VER="2.1.0.0.17.4"
+
+WIKI_RELEASES_URL="https://ltc3.linux.ibm.com/wiki/PowerKVM/Builds/Releases/$RELEASE_ISO_ID"
+WIKI_SAPPHIRE_INSTALL="https://ltc3.linux.ibm.com/wiki/Sapphire/Install"
+
+ISO_NAME="ibm-powerkvm-${PKVM_STREAM}.${SERVICE_PACK}-${BUILD_NUMBER}.${RESPIN}-ppc64-${MILESTONE}-$RELEASE_ISO_ID.iso"
+ISO_URL="${GSA_URL}/$RELEASE_FOLDER/$ISO_NAME"
+ISO_MD5="a24b48c9a050f4bdf2d613bf4157328d"
+
+NETBOOT_TARBALL="ibm-powerkvm-netboot-${PKVM_STREAM}.${SERVICE_PACK}-${BUILD_NUMBER}.${RESPIN}-ppc64-${MILESTONE}-$RELEASE_ISO_ID.tar.gz"
+NETBOOT_URL="${GSA_URL}/$RELEASE_FOLDER/$NETBOOT_TARBALL"
+NETBOOT_TARBALL_MD5="56004200399951a055ab34dd3caf2c52"
+
+EMAIL_CONTACT="lisianem@br.ibm.com"
+
+
+# list of tag names to be replaced in the template files
+VARS="\
+BASE_VER \
+EMAIL_CONTACT \
+ISO_MD5 \
+ISO_NAME \
+ISO_URL \
+LTCPHX_OS_URL \
+MILESTONE \
+NETBOOT_TARBALL_MD5 \
+PKVM_STREAM \
+RELEASE_ISO_ID \
+RELEASE_VER \
+WIKI_RELEASES_URL \
+WIKI_SAPPHIRE_INSTALL \
+"
+

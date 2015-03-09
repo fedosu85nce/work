@@ -1,0 +1,6 @@
+open @GSA_HOST@
+user @GSA_USER@ @GSA_PASS@
+set ftp:passive-mode on
+set ftp:use-allo no
+cd @GSA_DIR@
+@LFTP_CMDS@

@@ -1,0 +1,1 @@
+- Due to a problem with the packaging in 2.1.1 stream, we are disabling the "2.1.0 to 2.1.1" upgrade option in 2.1.0 (SP2). We will enable it, post SP2 in an asynchronous package update, once the packaging problem in 2.1.1 is resolved with MCP.

@@ -1,0 +1,17 @@
+[Unit]
+Description=the zkvm installation program
+Wants=rsyslog.service systemd-udev-settle.service NetworkManager.service
+After=rsyslog.service systemd-udev-settle.service NetworkManager.service zkvm-sshd.service
+Requires=zkvm-sshd.service
+# TODO: use ConditionArchitecture in systemd v210 or later
+ConditionPathIsDirectory=|/sys/hypervisor/s390
+
+[Service]
+Environment=HOME=/root MALLOC_CHECK_=2 MALLOC_PERTURB_=204 PATH=/usr/bin:/bin:/sbin:/usr/sbin
+Type=oneshot
+WorkingDirectory=/root
+ExecStart=/usr/sbin/zkvm
+StandardInput=null
+StandardOutput=journal+console
+StandardError=journal+console
+TimeoutSec=0

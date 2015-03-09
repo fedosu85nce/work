@@ -1,0 +1,900 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-08 13:49+BRT\n"
+"PO-Revision-Date: 2014-05-08 13:50-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: UTF-8\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: controller/__data__.py:7
+msgid "ERROR: Cannot detect installed system, impossible to upgrade"
+msgstr ""
+"오류: 설치된 시스템을 찾을 수 없으므로 업그레이드할 수 없습니다."
+
+#: controller/__data__.py:8
+msgid "ERROR: Cannot detect installed system version, impossible to upgrade"
+msgstr ""
+"오류: 설치된 시스템 버전을 찾을 수 없으므로 업그레이드할 수 없습니다."
+
+#: controller/__data__.py:9
+msgid "ERROR: Cannot fast forward upgrades, impossible to upgrade"
+msgstr ""
+"오류: 업그레이드를 빠르기 진행할 수 없으므로 업그레이드할 수 없습니다."
+
+#: controller/__data__.py:10
+msgid "ERROR: Installed system is newer, impossible to upgrade"
+msgstr ""
+"오류: 설치된 시스템이 새 버전이므로 업그레이드할 수 없습니다."
+
+#: controller/__data__.py:11
+msgid "ERROR: Upgrade failed."
+msgstr ""
+"오류: 업그레이드가 실패했습니다."
+
+#: controller/__data__.py:12
+msgid "Error while installing IBM PowerKVM into disk %s"
+msgstr ""
+"IBM PowerKVM을 디스크 %s에 설치하는 중에 오류 발생"
+
+#: controller/__data__.py:13
+msgid "Formatting disks..."
+msgstr ""
+"디스크 포맷 중..."
+
+#: controller/__data__.py:14
+msgid "Formatting root device to reinstall system"
+msgstr ""
+"시스템을 재설치하기 위해 루트 장치 포맷 중"
+
+#: controller/__data__.py:15
+msgid "Installing IBM PowerKVM into disk %s..."
+msgstr ""
+"IBM PowerKVM을 디스크 %s에 설치 중..."
+
+#: controller/__data__.py:16
+msgid "Install IBM PowerKVM"
+msgstr ""
+"IBM PowerKVM 설치"
+
+#: controller/__data__.py:17
+msgid "Proceed to upgrade the system?"
+msgstr ""
+"시스템 업그레이드를 진행하시겠습니까?"
+
+#: controller/__data__.py:18
+msgid "Reinstall IBM PowerKVM"
+msgstr ""
+"IBM PowerKVM 재설치"
+
+#: controller/__data__.py:19
+msgid "Rescue mode (goes to terminal)"
+msgstr ""
+"복구 모드(터미널로 이동함)"
+
+#: controller/__data__.py:20
+msgid "Running Post Upgrade Scripts"
+msgstr ""
+"업그레이드 후 스크립트 실행 중"
+
+#: controller/__data__.py:21
+msgid "System Installed. Starting post install scripts."
+msgstr ""
+"시스템이 설치되었습니다. 설치 후 스크립트를 시작 중입니다."
+
+#: controller/__data__.py:22
+msgid "Upgrade concluded!"
+msgstr ""
+"업그레이드가 완료되었습니다."
+
+#: controller/__data__.py:23
+msgid "Upgrade installed IBM PowerKVM"
+msgstr ""
+"설치된 IBM PowerKVM 업그레이드"
+
+#: controller/__data__.py:24
+msgid "Getting disk information..."
+msgstr ""
+"디스크 정보를 가져오는 중..."
+
+#: ui/__data__.py:6 viewer/__data__.py:36
+msgid "Root Password"
+msgstr ""
+"루트 비밀번호"
+
+#: ui/__data__.py:7
+msgid "Timezone selection"
+msgstr ""
+"시간대 선택"
+
+#: ui/__data__.py:8
+msgid "Date and Time"
+msgstr ""
+"날짜 및 시간"
+
+#: ui/__data__.py:9
+msgid "Configure Network"
+msgstr ""
+"네트워크 구성"
+
+#: ui/__data__.py:10
+msgid "DNS configuration"
+msgstr ""
+"DNS 구성"
+
+#: ui/__data__.py:11
+msgid "Exit"
+msgstr ""
+"종료"
+
+#: viewer/__data__.py:12
+msgid "Welcome to IBM PowerKVM %s"
+msgstr ""
+"IBM PowerKVM %s 시작"
+
+#: viewer/__data__.py:13
+msgid "Select one of the options below and follow the instructions."
+msgstr ""
+"아래의 옵션 중에서 하나를 선택하고 지시사항을 따르십시오."
+
+#: viewer/__data__.py:14
+msgid ""
+"Are you sure you want to install on device %s?\n\n The following partitions will be removed: %s\n\n The following LVMs will be removed: %s\n\n"
+msgstr ""
+"%s 장치에 설치하시겠습니까?\n\n 다음 파티션이 제거됩니다. %s\n\n 다음 LVM이 제거됩니다. %s\n\n"
+
+#: viewer/__data__.py:17
+msgid "IBM PowerKVM %s"
+msgstr ""
+"IBM PowerKVM %s"
+
+#: viewer/__data__.py:18
+msgid "Ok"
+msgstr ""
+"확인"
+
+#: viewer/__data__.py:19
+msgid "Back"
+msgstr ""
+"이전"
+
+#: viewer/__data__.py:20
+msgid "Skip"
+msgstr ""
+"건너뛰기"
+
+#: viewer/__data__.py:21
+msgid "Next"
+msgstr ""
+"다음"
+
+#: viewer/__data__.py:22
+msgid "Edit"
+msgstr ""
+"편집"
+
+#: viewer/__data__.py:23
+msgid "  <Tab>/<Shift-Tab> between elements   |  <Space> selects"
+msgstr ""
+"  <Tab>/<Shift-Tab> 요소 간   |  <Space> 선택"
+
+#: viewer/__data__.py:29
+msgid "Password Length"
+msgstr ""
+"비밀번호 길이"
+
+#: viewer/__data__.py:30
+msgid "The root password must be at least 6 characters long."
+msgstr ""
+"루트 비밀번호는 6자 이상이어야 합니다."
+
+#: viewer/__data__.py:31
+msgid "Password Mismatch"
+msgstr ""
+"비밀번호 불일치"
+
+#: viewer/__data__.py:32
+msgid "The passwords you entered were different. Please try again."
+msgstr ""
+"입력한 비밀번호가 서로 다릅니다. 다시 시도하십시오."
+
+#: viewer/__data__.py:33
+msgid "Password (confirm):"
+msgstr ""
+"비밀번호(확인):"
+
+#: viewer/__data__.py:34
+msgid "Password:"
+msgstr ""
+"비밀번호:"
+
+#: viewer/__data__.py:35
+msgid "Pick a root password. You must type it twice to ensure you know what it is and didn't make a mistake in typing. Remember that the root password is a critical part of system security!"
+msgstr ""
+"루트 비밀번호를 선택하십시오. 비밀번호를 두 번 입력하여 비밀번호를 확실히 기억하고 입력에 실수가 없었는지 확인해야 합니다. 루트 비밀번호는 시스템 보안에서 중요한 부분입니다."
+
+#: viewer/__data__.py:41
+msgid "Select the timezone for the system"
+msgstr ""
+"시스템의 시간대 선택"
+
+#: viewer/__data__.py:42
+msgid "System clock uses UTC"
+msgstr ""
+"시스템 시계는 UTC를 사용함"
+
+#: viewer/__data__.py:43
+msgid "Timezone Selection"
+msgstr ""
+"시간대 선택"
+
+#: viewer/__data__.py:48
+msgid "Select the device to be configured:"
+msgstr ""
+"구성할 장치 선택:"
+
+#: viewer/__data__.py:49
+msgid "Configure network"
+msgstr ""
+"네트워크 구성"
+
+#: viewer/__data__.py:50
+msgid "UP"
+msgstr ""
+"위"
+
+#: viewer/__data__.py:51
+msgid "DOWN"
+msgstr ""
+"아래"
+
+#: viewer/__data__.py:56
+msgid "Hostname"
+msgstr ""
+"호스트 이름"
+
+#: viewer/__data__.py:57
+msgid "Primary DNS"
+msgstr ""
+"기본 DNS"
+
+#: viewer/__data__.py:58
+msgid "Secondary DNS"
+msgstr ""
+"보조 DNS"
+
+#: viewer/__data__.py:59
+msgid "Search"
+msgstr ""
+"검색"
+
+#: viewer/__data__.py:60
+msgid "DNS Configuration"
+msgstr ""
+"DNS 구성"
+
+#: viewer/__data__.py:65
+msgid "NTP Configuration"
+msgstr ""
+"NTP 구성"
+
+#: viewer/__data__.py:66
+msgid "NTP server 1: "
+msgstr ""
+"NTP 서버 1: "
+
+#: viewer/__data__.py:67
+msgid "NTP server 2: "
+msgstr ""
+"NTP 서버 2: "
+
+#: viewer/__data__.py:68
+msgid "NTP server 3: "
+msgstr ""
+"NTP 서버 3: "
+
+#: viewer/__data__.py:69
+msgid "NTP server 4: "
+msgstr ""
+"NTP 서버 4: "
+
+#: viewer/__data__.py:70
+msgid "Enable"
+msgstr ""
+"사용"
+
+#: viewer/__data__.py:75
+msgid "Date and time configuration"
+msgstr ""
+"날짜 및 시간 구성"
+
+#: viewer/__data__.py:76
+msgid "Date (YYYY / MM / DD):"
+msgstr ""
+"날짜(YYYY / MM / DD):"
+
+#: viewer/__data__.py:77
+msgid "Time (HH:MM:SS):"
+msgstr ""
+"시간(HH:MM:SS):"
+
+#: viewer/__data__.py:78
+msgid "Date time error"
+msgstr ""
+"날짜 및 시간 오류"
+
+#: viewer/__data__.py:79
+msgid ""
+"Date or time format is not correct!\nThe input: %s\nCorrect format: YYYY/MM/DD HH:MM:SS"
+msgstr ""
+"날짜 또는 시간 형식이 올바르지 않습니다!\n출력은 다음과 같습니다. %s\n올바른 형식: YYYY/MM/DD HH:MM:SS"
+
+#: viewer/__data__.py:85
+msgid "Invalid Entry"
+msgstr ""
+"올바르지 않은 항목"
+
+#: viewer/__data__.py:86
+msgid "Either DHCP must be selected, or IP must be provided."
+msgstr ""
+"DHCP를 선택하거나 IP를 제공해야 합니다."
+
+#: viewer/__data__.py:87
+msgid "Device"
+msgstr ""
+"장치"
+
+#: viewer/__data__.py:88
+msgid "MAC Address"
+msgstr ""
+"MAC 주소"
+
+#: viewer/__data__.py:89
+msgid "Use DHCP"
+msgstr ""
+"DHCP 사용"
+
+#: viewer/__data__.py:90
+msgid "Static IP"
+msgstr ""
+"정적 IP"
+
+#: viewer/__data__.py:91
+msgid "Netmask"
+msgstr ""
+"넷마스크"
+
+#: viewer/__data__.py:92
+msgid "Default gateway IP"
+msgstr ""
+"기본 게이트웨이 IP"
+
+#: viewer/__data__.py:93
+msgid "Network Device Configuration"
+msgstr ""
+"네트워크 장치 구성"
+
+#: viewer/__data__.py:94
+msgid "Create Network bridge device (br%s)"
+msgstr ""
+"네트워크 브릿지 장치(br%s) 작성"
+
+#: viewer/__data__.py:98
+msgid "Error while trying to remove the Volume Group in %s"
+msgstr ""
+"%s에서 볼륨 그룹을 제거하는 중에 오류 발생"
+
+#: viewer/__data__.py:99
+msgid "The disk %s is part of the LVM Volume Group(s) ['VolGroup'] which will be destroyed if you continue. Are you sure you want to use that disk?"
+msgstr ""
+"%s 디스크는 LVM 볼륨 그룹 ['VolGroup']의 일부이며 계속하면 영구 삭제됩니다. 이 디스크를 사용하시겠습니까?"
+
+#: viewer/__data__.py:100
+msgid "Yes"
+msgstr ""
+"예"
+
+#: viewer/__data__.py:101
+msgid "No"
+msgstr ""
+"아니오"
+
+#: viewer/__data__.py:102
+msgid "Installation Error"
+msgstr ""
+"설치 오류"
+
+#: viewer/__data__.py:107
+msgid "Select the device to install IBM PowerKVM. All data in the selected disk will be lost."
+msgstr ""
+"IBM PowerKVM을 설치할 장치를 선택하십시오. 선택한 디스크에 있는 모든 데이터가 손실됩니다."
+
+#: viewer/__data__.py:108
+msgid "Disk information"
+msgstr ""
+"디스크 정보"
+
+#: viewer/__data__.py:109
+msgid "  <Tab>/<Shift-Tab> between elements  |  <F3> for details"
+msgstr ""
+"  <Tab>/<Shift-Tab> 요소 간  |  <F3> 세부사항"
+
+#: viewer/__data__.py:110
+msgid "Disk size"
+msgstr ""
+"디스크 크기"
+
+#: viewer/__data__.py:111
+msgid "The disk size must be greater than 70G!"
+msgstr ""
+"디스크 크기는 70G 이상이어야 합니다."
+
+#: viewer/__data__.py:112
+msgid "No disk found"
+msgstr ""
+"디스크가 없습니다."
+
+#: viewer/__data__.py:113
+msgid "No disks were found in the system."
+msgstr ""
+"시스템에 디스크가 없습니다."
+
+#: viewer/__data__.py:114
+msgid "ID:"
+msgstr ""
+"ID:"
+
+#: viewer/__data__.py:115
+msgid "Size"
+msgstr ""
+"크기"
+
+#: viewer/__data__.py:116
+msgid "Multipath:"
+msgstr ""
+"다중 경로:"
+
+#: viewer/__data__.py:117
+msgid "Name"
+msgstr ""
+"이름"
+
+#: viewer/__data__.py:118
+msgid "Filesystem"
+msgstr ""
+"파일 시스템"
+
+#: viewer/__data__.py:119
+msgid "VG/Raid"
+msgstr ""
+"VG/Raid"
+
+#: viewer/__data__.py:125
+msgid "Choose the language"
+msgstr ""
+"언어 선택"
+
+#: viewer/__data__.py:130
+msgid "The current installed system will be erased, including all general system-wide and virtualization configuration files.Only the contents within /var/lib/libvirt/images and /var/log will be preserved. WARNING: this means the configuration of your Virtual Machines WILL BE ERASED, leaving only the disk images behind. You are advised to back up your VM configurations before proceeding. Are you sure you would like to proceed?"
+msgstr ""
+"시스템 전체의 모든 일반 구성 파일 및 가상화 구성 파일을 포함하여 현재 설치된 시스템을 지웁니다. /var/lib/libvirt/images 및 /var/log의 컨텐츠만 유지됩니다. 경고: 가상 머신의 구성을 지우고 디스크 이미지만 남깁니다. 계속하기 전에 VM 구성을 백업하는 것이 좋습니다. 계속하시겠습니까?"
+
+#: viewer/__data__.py:136
+msgid ""
+"A previous installation of PowerKVM has been detected at:\n"
+"\n"
+"%s\n"
+"\n"
+msgstr ""
+"다음 위치에서 이전 PowerKVM 설치가 발견되었습니다.\n"
+"\n"
+"%s\n"
+"\n"
+
+#: viewer/__data__.py:141
+msgid "Hardware is not entitled to proceed. Aborting!"
+msgstr ""
+"진행할 권한이 하드웨어에 부여되지 않았습니다. 중단합니다."
+
+#: viewer/__data__.py:142
+msgid "Invalid entitlement! "
+msgstr ""
+"권한 부여가 올바르지 않습니다."
+
+#: viewer/__data__.py:147
+msgid "Preparing to install IBM PowerKVM System"
+msgstr ""
+"IBM PowerKVM 시스템 설치 준비 중"
+
+#: viewer/__data__.py:148
+msgid "Unknown error"
+msgstr ""
+"알 수 없는 오류"
+
+#: viewer/__data__.py:149
+msgid "Sorry something went wrong the proper error message is on the log file"
+msgstr ""
+"오류가 발생했습니다. 적절한 오류 메시지는 로그 파일에 있습니다. "
+
+#: viewer/__data__.py:155
+msgid "Please, reboot your system now."
+msgstr ""
+"해당 시스템을 지금 다시 부팅하십시오."
+
+#: viewer/__data__.py:156
+msgid "Reboot"
+msgstr ""
+"다시 부팅"
+
+#: viewer/__data__.py:157
+msgid "Installation completed! "
+msgstr ""
+"설치가 완료되었습니다! "
+
+#: viewer/__data__.py:162
+msgid "The reinstall process can't continue. No previous system was found. Aborting!"
+msgstr ""
+"재설치 프로세스를 계속할 수 없습니다. 이전 시스템이 없어 중단합니다."
+
+#: viewer/__data__.py:168
+msgid "Preparing to upgrade system"
+msgstr ""
+"시스템 업그레이드 준비 중"
+
+#: viewer/__data__.py:169
+msgid "Working..."
+msgstr ""
+"작업 중..."
+
+#: viewer/__data__.py:174
+msgid "Installation exited with error code: %s"
+msgstr ""
+"설치 종료 시 오류 코드 발생: %s"
+
+#: viewer/__data__.py:175
+msgid "Log is available on %s"
+msgstr ""
+"로그는 %s에 있습니다."
+
+#: viewer/__data__.py:176
+msgid "Unexpected error."
+msgstr ""
+" 상치 않은 오류가 발생했습니다."
+
+#: viewer/__data__.py:177
+msgid "Unknown error."
+msgstr ""
+"알 수 없는 오류가 발생했습니다."
+
+#: viewer/__data__.py:178
+msgid "Invalid disk size."
+msgstr ""
+"디스크 크기가 올바르지 않습니다."
+
+#: viewer/__data__.py:179
+msgid "No disk found in the system."
+msgstr ""
+"시스템에 디스크가 없습니다."
+
+#: viewer/__data__.py:180
+msgid "Hardware is not entitled, aborting installation."
+msgstr ""
+"하드웨어에 권한이 부여되지 않았습니다. 설치를 중단합니다."
+
+#: viewer/__data__.py:181
+msgid "Error while installing IBM PowerKVM."
+msgstr ""
+"IBM PowerKVM을 설치하는 중에 오류가 발생했습니다."
+
+#: viewer/__data__.py:182
+msgid "Error while performing disk operations."
+msgstr ""
+"디스크 조작을 수행하는 중 오류가 발생했습니다."
+
+#: viewer/__data__.py:183
+msgid "Invalid error code."
+msgstr ""
+"오류 코드가 올바르지 않습니다."
+
+#: viewer/__data__.py:184
+msgid "Could not remove LVM entities."
+msgstr ""
+"LVM 엔티티를 제거할 수 없습니다."
+
+#: viewer/__data__.py:185
+msgid "Could not deactivate volume groups."
+msgstr ""
+"볼륨 그룹을 비활성화할 수 없습니다."
+
+#: viewer/__data__.py:186
+msgid "Could not activate volume groups."
+msgstr ""
+"볼륨 그룹을 활성화할 수 없습니다."
+
+#: viewer/__data__.py:187
+msgid "Could not stop software RAID."
+msgstr ""
+"소프트웨어 RAID를 중지할 수 없습니다."
+
+#: viewer/__data__.py:188
+msgid "Disk information not available."
+msgstr ""
+"디스크 정보를 사용할 수 없습니다."
+
+#: viewer/__data__.py:189
+msgid "Problem while removing pratitioning scheme."
+msgstr ""
+"파티셔닝 스킴을 제거하는 중에 문제점이 발생했습니다."
+
+#: viewer/__data__.py:190
+msgid "Problem while partitioning the disk."
+msgstr ""
+"디스크를 파티셔닝하는 중에 문제점이 발생했습니다."
+
+#: viewer/__data__.py:191
+msgid "Problem while creating LVM."
+msgstr ""
+"LVM을 작성하는 중에 문제점이 발생했습니다."
+
+#: viewer/__data__.py:192
+msgid "Failed to download (HTTP) install automation file."
+msgstr ""
+"설치 자동화 파일을 다운로드(HTTP)하는 데 실패했습니다."
+
+#: viewer/__data__.py:193
+msgid "Failed to download (TFTP) install automation file."
+msgstr ""
+"설치 자동화 파일을 다운로드(TFTP)하는 데 실패했습니다."
+
+#: viewer/__data__.py:194
+msgid "Problem downloading (NFS) install automation file."
+msgstr ""
+"설치 자동화 파일을 다운로드(NFS)하는 중에 문제가 발생했습니다."
+
+#: viewer/__data__.py:195
+msgid "Could not parse install automation file."
+msgstr ""
+"설치 자동화 파일을 구문 분석하지 못했습니다."
+
+#: viewer/__data__.py:196
+msgid "Failed to get IPR RAID label."
+msgstr ""
+"IPR RAID 레이블을 가져오지 못했습니다."
+
+#: viewer/__data__.py:197
+msgid "Failed while executing pre-install modules."
+msgstr ""
+"사전 설치 모듈을 수행하는 데 실패했습니다."
+
+#: viewer/__data__.py:198
+msgid "Failed to create disklabel on IPR RAID."
+msgstr ""
+"IPR RAID에 디스크 레이블을 작성하지 못했습니다."
+
+#: viewer/__data__.py:199
+msgid "Failed to execute install automation pre-script."
+msgstr ""
+"설치 자동화 사전 스크립트를 수행하는 데 실패했습니다."
+
+#: viewer/__data__.py:200
+msgid "Failed to execute PowerKVM pre-script."
+msgstr ""
+"PowerKVM 사전 스크립트를 수행하는 데 실패했습니다."
+
+#: viewer/__data__.py:201
+msgid "Failed while executing post-install modules."
+msgstr ""
+"사후 설치 모듈을 수행하는 데 실패했습니다."
+
+#: viewer/__data__.py:202
+msgid "Failed to set password."
+msgstr ""
+"비밀번호를 설정하지 못했습니다."
+
+#: viewer/__data__.py:203
+msgid "Failed to execute install automation post-script."
+msgstr ""
+"설치 자동화 사후 스크립트를 수행하는 데 실패했습니다."
+
+#: viewer/__data__.py:204
+msgid "Failed to set NTP service."
+msgstr ""
+"NTP 서비스를 설정하지 못했습니다."
+
+#: viewer/__data__.py:205
+msgid "Invalid network interface."
+msgstr ""
+"네트워크 인터페이스가 올바르지 않습니다."
+
+#: viewer/__data__.py:206
+msgid "Failed to write UTC time configuration."
+msgstr ""
+"UTC 시간 구성을 작성하지 못했습니다."
+
+#: viewer/__data__.py:207
+msgid "Missing target network interface in install automation file."
+msgstr ""
+"설치 자동화 파일에서 대상 네트워크 인터페이스가 누락되었습니다."
+
+#: viewer/__data__.py:208
+msgid "Missing target disk parameter in install automation file."
+msgstr ""
+"설치 자동화 파일에서 대상 디스크 매개변수가 누락되었습니다."
+
+#: viewer/__data__.py:209
+msgid "Error while installing packages."
+msgstr ""
+"패키지를 설치하는 중에 오류가 발생했습니다."
+
+#: viewer/__data__.py:210
+msgid "No repository provided to the installer."
+msgstr ""
+"설치 프로그램에 저장소를 제공하지 않았습니다."
+
+#: viewer/__data__.py:211
+msgid "Invalid repository path."
+msgstr ""
+"저장소 경로가 올바르지 않습니다."
+
+#: viewer/__data__.py:212
+msgid "Invalid repository content."
+msgstr ""
+"저장소 컨텐츠가 올바르지 않습니다."
+
+#: viewer/__data__.py:213
+msgid "Failed to load Timezones list."
+msgstr ""
+"시간대 목록을 로드하지 못했습니다."
+
+#: viewer/__data__.py:214
+msgid "Firmware version must be greater than %s"
+msgstr ""
+"펌웨어 버전이 %s보다 높아야 합니다."
+
+#: viewer/__data__.py:215
+msgid "Invalid machine type."
+msgstr ""
+"머신 유형이 올바르지 않습니다."
+
+#: viewer/__data__.py:216
+msgid "Invalid hypervisor."
+msgstr ""
+"하이퍼바이저가 올바르지 않습니다."
+
+#: viewer/__data__.py:217
+msgid "No previous system found."
+msgstr ""
+"이전 시스템을 찾을 수 없습니다."
+
+#: viewer/__data__.py:218
+msgid "Unexpected error while partitioning the disk."
+msgstr ""
+"디스크를 파티셔닝하는 중에 예상치 못한 오류가 발생했습니다."
+
+#: viewer/__data__.py:219
+msgid "Unexpected error while installing packages."
+msgstr ""
+"패키지를 설치하는 중에 예상치 못한 오류가 발생했습니다."
+
+#: viewer/__data__.py:220
+msgid "Unexpected error while executing post-install modules."
+msgstr ""
+"사후 설치 모듈을 수행하는 중에 예상치 못한 오류가 발생했습니다."
+
+#: viewer/__data__.py:221
+msgid "Unexpected error while executing kickstart."
+msgstr ""
+"kickstart를 수행하는 중에 예상치 못한 오류가 발생했습니다."
+
+#: viewer/__data__.py:222
+msgid "Unexpected error while verifying disks."
+msgstr ""
+"디스크를 확인하는 중에 예상치 못한 오류가 발생했습니다."
+
+#: viewer/__data__.py:223
+msgid "Unexpected error while selecting disks."
+msgstr ""
+"디스크를 선택하는 중에 예상치 못한 오류가 발생했습니다."
+
+#: viewer/__data__.py:224
+msgid "Unexpected error while configuring system."
+msgstr ""
+"시스템을 구성하는 중에 예상치 못한 오류가 발생했습니다."
+
+#: viewer/__data__.py:228
+msgid "Installation Summary"
+msgstr ""
+"설치 요약"
+
+#: viewer/__data__.py:229
+msgid "Timezone: "
+msgstr ""
+"시간대: "
+
+#: viewer/__data__.py:230
+msgid "Date/Time: "
+msgstr ""
+"날짜/시간: "
+
+#: viewer/__data__.py:231
+msgid "NTP servers"
+msgstr ""
+"NTP 서버"
+
+#: viewer/__data__.py:232
+msgid "NTP disabled"
+msgstr ""
+"NTP 사용 안함"
+
+#: viewer/__data__.py:233
+msgid "IP Address: "
+msgstr ""
+"IP 주소: "
+
+#: viewer/__data__.py:234
+msgid "Gateway: "
+msgstr ""
+"게이트웨이: "
+
+#: viewer/__data__.py:235
+msgid "Netmask: "
+msgstr ""
+"넷마스크: "
+
+#: viewer/__data__.py:236
+msgid "Hostname: "
+msgstr ""
+"호스트 이름: "
+
+#: viewer/__data__.py:237
+msgid "Bridge: "
+msgstr ""
+"브릿지: "
+
+#: viewer/__data__.py:238
+msgid "DHCP is enabled"
+msgstr ""
+"DHCP를 사용함"
+
+#: viewer/__data__.py:239
+msgid "Network"
+msgstr ""
+"네트워크"
+
+#: viewer/__data__.py:240
+msgid "Device: "
+msgstr ""
+"장치: "
+
+#: viewer/__data__.py:241
+msgid "Password is set"
+msgstr ""
+"비밀번호가 설정됨"
+
+#: viewer/__data__.py:242
+msgid "System clock uses UTC: "
+msgstr ""
+"시스템 시계에서 UTC를 사용함: "
+
+#: viewer/__data__.py:245
+msgid "I Accept both IBM and non-IBM terms"
+msgstr ""
+"IBM 및 비IBM 조항에 동의합니다."
+
+#: viewer/__data__.py:246
+msgid "I do not accept the terms in the license agreement"
+msgstr ""
+"라이센스 계약의 조항에 동의하지 않습니다."
+
+
+# ENGL1SH_VERS10N 49670_14 DO NOT REMOVE OR CHANGE THIS LINE
+# T9N_SRC_ID 228
+# T9N_SH1P_STR1NG KVM21AAP001 6

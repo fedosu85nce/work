@@ -1,0 +1,130 @@
+#!/bin/sh
+
+#
+# IMPORTS
+#
+. /usr/share/dracut/modules.d/99base/dracut-lib.sh
+
+
+#
+# CONSTANTS
+#
+BOOT_DEVICE=`getarg root=`
+DEFAULT_YABOOT_CONF="/opt/ibm/zkvm-installer/config/yaboot.conf"
+FIRSTBOOT=`getarg firstboot=`
+ROOTFS_MODE=`getarg rootfsmode=`
+RUN_DIR="/opt/ibm/zkvm-installer"
+SAVE_CMDLINE="/opt/ibm/zkvm-installer/control/cmdline"
+
+
+#
+# CODE
+#
+
+
+# ------------------------------------------------------------------------------
+# Update hwclock
+# ------------------------------------------------------------------------------
+update_hwclock() {
+    # update date and time system
+    hwclock -s &>/dev/null
+
+    UTC=`grep "UTC" /etc/adjtime`
+    if [[ -n $UTC ]]; then
+        utcDate=`date --utc +%D`
+        utcTime=`date --utc +%T`
+        hwclock --set --date="$utcDate $utcTime"
+    fi
+}
+
+# ------------------------------------------------------------------------------
+# Check if this is the first boot after the system was updated and update
+# yaboot.conf file
+#
+# @type  $1: string
+# @param $1: boot device
+#
+# @type  $2: string
+# @param $2: root filesystem mode
+# ------------------------------------------------------------------------------
+checkUpdatedSystem() {
+    local disk=${BOOT_DEVICE%?}
+    local root=`mktemp -d`
+    local rootBkp=`mktemp -d`
+    local kernel=`ls /boot | grep vmlinuz`
+    local initrd=`ls /boot | grep initrd`
+
+    if [ ! -e "$SAVE_CMDLINE" ]; then
+        return
+    fi
+
+    oldrootdev=`cat "$SAVE_CMDLINE" | sed 's/.*root=\([^ ]*\).*/\1/'`
+    if [[ $oldrootdev == $BOOT_DEVICE ]]; then
+        return
+    fi
+
+    mount -n "$disk"2 $root
+    rm -rf $root/cow-bkp.tar.gz
+
+    cp $DEFAULT_YABOOT_CONF $root/etc/yaboot.conf
+    sed -i s@'boot=\/dev\/ram'@'boot='$disk'1'@g $root/etc/yaboot.conf
+    sed -i s@'\/dev\/ram'@$BOOT_DEVICE@g $root/etc/yaboot.conf
+    sed -i s/'vmlinuz'/$kernel/g $root/etc/yaboot.conf
+    sed -i s/'initrd.img'/$initrd/g $root/etc/yaboot.conf
+    sed -i s/'rootfsmode=..'/"rootfsmode="$ROOTFS_MODE/g $root/etc/yaboot.conf
+
+    umount -n $root
+
+    mount -n "$disk"3 $rootBkp
+    rm -rf $rootBkp/cow-bkp.tar.gz
+    umount -n $rootBkp
+
+    rm -rf $root $rootBkp
+}
+
+# ------------------------------------------------------------------------------
+# Entry point
+# ------------------------------------------------------------------------------
+main() {
+    # update PYTHONPATH variable
+    export PYTHONPATH=$RUN_DIR/:$PYTHONPATH
+
+    # boot device is NOT a block device: CDROM or Network boot: start installation application
+    if [ ! -b "$BOOT_DEVICE" ]; then
+        export TERM=eterm
+        python $RUN_DIR/ui/default/main.py
+        export TERM=vt100-nav
+        exec /bin/login -f root
+
+        return
+    fi
+
+    # Update hwclock
+    update_hwclock
+
+    # detect first HD boot
+    if [ -n "$FIRSTBOOT" ]; then
+
+        local root=`mktemp -d`
+
+        mount -n $BOOT_DEVICE $root
+        sed -i s@'firstboot=yes'@''@g $root/etc/yaboot.conf
+        umount -n $root
+
+        export TERM=eterm
+        python $RUN_DIR/ui/systemconfig/main.py
+        export TERM=vt100-nav
+    else
+        # check if the system was updated
+        checkUpdatedSystem
+    fi
+
+    # Save /proc/cmdline
+    cat /proc/cmdline > $SAVE_CMDLINE
+
+    exec /sbin/agetty /dev/$DEV $SPEED vt100-nav
+
+    return
+}
+
+main

@@ -1,0 +1,88 @@
+IBM PowerKVM Release Driver version @RELEASE_VER@ (@MILESTONE@) is available
+
+
+The IBM PowerKVM driver is composed of the following elements:
+
+* SAPPHIRE Firmware
+    * SAPPHIRE Instructions carried separately at @WIKI_SAPPHIRE_INSTALL@
+* IBM PowerKVM Hypervisor
+    * Installable Hypervisor Image
+    * Package Updates to IBM PowerKVM GA Version
+
+For bugs, in general, please refer to:
+
+http://bugzilla.linux.ibm.com (Family: PPC64 Development / Vendor: PowerKVM)
+
+These components, in the specific levels pertaining to this driver
+release, are being made in two forms:
+
+Option 1: Installable Hypervisor Image for IBM PowerKVM @RELEASE_VER@ @MILESTONE@
+Update @RELEASE_ISO_ID@ available.
+
+    At the wiki page you can find information on how to properly
+    consume the IBM PowerKVM Hypervisor Image:
+    @WIKI_RELEASES_URL@
+
+    Download options:
+
+        ISO:
+        @ISO_URL@
+        MD5: @ISO_MD5@
+
+        BOOTP (see instructions in the wiki):
+        Proceed with downloading the ISO image and look for
+        further instructions in the wiki
+
+        HTTP Boot from petitboot (instructions in the wiki):
+        @LTCPHX_OS_URL@
+
+        If you don't have permission to download, please drop a
+        letter to @EMAIL_CONTACT@ with your GSA ID and I'll grant you access.
+
+Option 2: IBM PowerKVM Host OS Package Updates Release @RELEASE_VER@
+
+    * Minimal requirements: IBM PowerKVM @BASE_VER@ (GA)
+    * These updates are primarily for internal consumption/testing. Once
+      validated, these updates should be made available in the official
+      product update channels.
+
+    Updating IBM PowerKVM Packages from internal repositories
+
+    You can update your existing IBM PowerKVM @PKVM_STREAM@ system with the latest development IBM PowerKVM rpm
+    packages in two forms.
+
+    Updates are available through GSA repository for IBM
+    PowerKVM. If your system has direct access to it, you can use Yum. In
+    case it does not, use the ibm-update-system utility, as instructed
+    below.
+
+    Before you update IBM PowerKVM, power off any guest virtual machines
+    and stop any workloads. You are required to restart your system after
+    you apply any updates.
+
+    (Option 2a) To update your existing IBM PowerKVM @PKVM_STREAM@ using yum, follow these steps:
+    
+        a) Make sure your system has connectivity to
+           pokgsa.ibm.com, from within PowerKVM host.
+        b) Download repository file:
+           # wget
+http://pokgsa.ibm.com/projects/p/pkvm-updates/devel/IBM/powerkvm-devel.repo
+-O /etc/yum.repos.d/powerkvm-devel.repo
+        c) Use the yum command to produce a list of available
+           updates. For example:
+           # yum update
+        d) Review the list of packages and enter Y if you agree.
+
+    (Option 2b) To update your existing IBM PowerKVM @PKVM_STREAM@ using the ibm-update-system utility, follow
+    these steps:
+
+        a) Download the IBM PowerKVM update ISO image from
+           @ISO_URL@
+           and upload this ISO image to your PowerKVM system, in a
+           location of your choice.
+        b) Run the following command:
+           # ibm-udpate-system --iso-path=path_to_file
+           (Replace path_to_file with the path to the ISO file
+           containing the updates.)
+        c) Review the packages marked for update, and agree by
+           entering Y.

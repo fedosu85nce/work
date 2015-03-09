@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export PYTHONPATH=/opt/ibm/zkvm-installer/:$PYTHONPATH
+python /opt/ibm/zkvm-installer/main.py

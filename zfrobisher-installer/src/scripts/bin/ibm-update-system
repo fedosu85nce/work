@@ -1,0 +1,5 @@
+#!/bin/bash
+export PYTHONPATH=/opt/ibm/zkvm-installer/:$PYTHONPATH
+export TERM=eterm
+python /opt/ibm/zkvm-installer/scripts/updater.py $*
+export TERM=vt100-nav
