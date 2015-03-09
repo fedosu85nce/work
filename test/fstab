@@ -1,0 +1,19 @@
+This is added via twu host --line1
+this is added though virt --line1 change to line2
+#
+# /etc/fstab
+# Created by anaconda on Mon Nov 10 07:36:35 2014
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+<<<<<<< HEAD
+host -is is added though virt --line
+=======
+add by virt2
+virt - is is added though virt --line
+>>>>>>> f8b369d0fa597dce27563058b6ea29f511d7d227
+add by virt
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+This is added via twu host --line10
+UUID=c7a97494-a866-486c-b8ca-90f4feb1639e /boot                   ext4    defaults        1 2
+UUID=5220cf6c-79e3-4004-92f0-ae733aeb6021 swap                    swap    defaults        0 0

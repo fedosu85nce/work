@@ -1,0 +1,102 @@
+QA development:
+
+1. Self introducion
+2. Projects
+3. Programming language: Python C Shell sed awk
+	Debug: P84
+4. Algorithms: LinkList BiTree
+	1. LinkList:
+		1. How to judge whether two linklists will cross?
+		2. Write a programme to reverse a linklist.
+	2. Bitree:
+		1. Write a programme to inOrderTraverse a bitree without recursion.
+5. SQL language
+	1. There are six types of SQL language:
+6. Describe the procedure of booting
+7. The most impressive bug
+	1. Check the diffrences betwwen new version and old version if the bug only
+occurs in the new version
+	2. 
+8. The greatest contribution/ excellent work
+9. How to handle the argument with dev
+10. Why leave the company
+11. English oral
+12. What would you expect for the new job? / What is your plan for the next few
+years?
+
+tshark:
+	tshark -i br0 -w a.cap -f 'port 8080'
+	tshark -xVr a.cap | less
+
+
+linux api:
+	file:	open(),read(),write(),lseek(),close()
+
+linux cmd:
+	as bc dig objdump hexdump readelf strace cal df du ls date touch who last w
+	whoami yum uname
+
+	system managerment:
+		sysctl	
+
+	others:
+		grep -r abc *       #grep from all the sub directories
+		bc: obase=16;ibase=16 tips:must set obase first.
+			obase=16;ibase=A	  should be 'A' rather than '10'
+			scale=5				  3/5=.60000
+		pdftk nce4.pdf cat 1 5 output 2.pdf #extracting page 1 and page 5 from
+											#nce4.pdf into a new 2.pdf
+		netstat -natp
+		lsof -i :80
+
+compile:
+	gcc -E -S -c
+		.i .s .o
+	as hello.s -o hello.o
+	ld hello.o -o hello
+	readelf objdump size strip file hexdump *binutils*
+
+nginx:
+	P27
+	start php: php-cgi -b 9000
+
+sql:
+
+sed:
+
+awk:
+
+shell:
+
+python:
+
+vi:
+	<C-o> + zz  "quickly draw screen to the middle"
+
+C:
+	Global initialized variables and static initialized variables are stored in
+	.data segment together. global uninitialized and static uninitialized
+	variables are stored in .bss segment together near the initialized ones, and
+	may not take space. Local variables do not take space and will be stored in
+	stack while running.
+
+	The default size of stack in GCC is 8MB, verified by `ulimit -s`.
+
+gdb:
+	to print all elements in a struct: "set print elements 0"
+
+
+English:
+	rebel stuffy stumble patriot traitor impede tamper condemn scandal stun
+	tragedy overtake distraught inconsolable honest farewell repatriate intact
+	bond sole decline recline cosy dispute standoff evacuate reformer dictator
+	sanction separatist unrest religion regional condolence casualty
+
+	lash out at-	stay put-
+
+1. set screen under `gnu screen' refresh after quitting from vim and some other
+tools.
+	uncomment the `altscreen on' in the `/etc/screenrc' file.
+
+2. pageup in gnu screen
+	C-A Esc
