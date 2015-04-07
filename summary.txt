@@ -1,26 +1,79 @@
 1. Self introducion
+   education back ground
+   work experience
+   projects: blivet
+   technichs: languages, linux, etc
+   
 2. Projects
+   user-order system
+   blivet
 3. Programming language: 
     Python 
+    C
     Shell sed awk
-4. Algorithms: LinkList BiTree
+4. Data structure and Algorithms:
 	1. LinkList:
-		1. How to judge whether two linklists will cross?
-		2. Write a programme to reverse a linklist.
 	2. Bitree:
-		1. Write a programme to inOrderTraverse a bitree without recursion.
     3. Sort
+    4. String
 5. Design Pattern
-6. Describe the procedure of booting
-7. The most impressive challenge
-8. The greatest contribution/ excellent work
-9. English oral
-10. What would you expect for the new job? / What is your plan for the next few
-years?
+6. Linux *
+* familiar with linux system api
+* multiply thread programming
+* socket programming
+
+others:
+6. The most impressive challenge
+7. The greatest contribution/ excellent work
+8. Describe the procedure of booting
+
+Write programs:
+implement some built in functions in c or in python
+  implement strcpy() in c
+data structure
+  list:
+    revert a link list in python
+    determine whether a link-list has a loop
+    how to judge whether two linklists will cross?
+  tree:
+    in-order reverse of bi-tree
+  sort:
+  string:
+     implement strcpy, strstr
+
+Design Pattern:
+  six principles
+  tweenty three patterns
+
+C:
+  stack
+  heap
+  static
+
+python:
+  list
+  dict
+  tuple
+  copy- deep copy and shalow copy
+  decorator
+  class
 
 
+linux 
+  bash:
+    sed
+      i n h H
+    awk
+  git:
+    push pull clone add commit reset rebase log reflog 
+  api:
 
-linux cmd:
+
+projects:
+  blivet - a python program to manage partition.
+
+
+cmd:
 	as bc dig objdump hexdump readelf strace cal df du ls date touch who last w
 	whoami yum uname
 
@@ -45,15 +98,6 @@ linux cmd:
        	    uncomment the `altscreen on' in the `/etc/screenrc' file.
         pageup in gnu screen
         	C-A Esc
-
-
-sed:
-
-awk:
-
-shell:
-
-python:
 
 English:
 	rebel stuffy stumble patriot traitor impede tamper condemn scandal stun
