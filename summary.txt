@@ -5,20 +5,22 @@
    technichs: languages, linux, etc
    
 2. Projects
-   user-order system
+   user-order system: using ines protocol
    blivet
 3. Programming language: 
     Python 
     C
     Shell sed awk
 4. Data structure and Algorithms:
-	1. LinkList:
-	2. Bitree:
-    3. Sort
-    4. String
+	 LList:
+     String
+	 Bitree:
+     Sort
+     Search
 5. Design Pattern
 6. Linux *
 * familiar with linux system api
+  file:	open(), read()
 * multiply thread programming
 * socket programming
 
@@ -37,6 +39,8 @@ data structure
     how to judge whether two linklists will cross?
   tree:
     in-order reverse of bi-tree
+    pre-order reverse of bi-tree
+    post-order reverse of bi-tree
   sort:
   string:
      implement strcpy, strstr
@@ -70,6 +74,7 @@ linux
 
 
 projects:
+  user ording system
   blivet - a python program to manage partition.
 
 
